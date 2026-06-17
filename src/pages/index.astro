@@ -1,11 +1,361 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="AI Voice Agents & Websites for Trade Shops">
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 1: HERO — Broad problem-solving engine -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="max-w-6xl mx-auto px-6 pt-28 pb-20 text-center md:text-left">
+    <div class="md:grid md:grid-cols-2 md:gap-16 items-center">
+      <div>
+        <h1 class="font-['Manrope'] text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-[#2D2D2D] mb-4">
+          A Problem-Solving<br />
+          Engine for Your<br />
+          <span class="text-[#E5B73C]">Shop</span>
+        </h1>
+        <p class="text-[#333333] text-lg leading-relaxed mb-6 max-w-md">
+          Thalux builds and runs the digital systems that keep your business moving —
+          so you can focus on the work that pays.
+        </p>
+        <!-- Institutional credibility — no name attached, reads as Thalux's knowledge -->
+        <p class="text-sm text-gray-500 mb-4 max-w-md">
+          Built on 41 years of trade-floor experience, refined at Tesla.
+        </p>
+        <!-- Light client mention — not a logo wall -->
+        <p class="text-xs text-gray-400 mb-8 tracking-wide uppercase max-w-md">
+          Trusted by <span class="text-gray-600 font-semibold">CV Automotive</span> and <span class="text-gray-600 font-semibold">Gorilla Fire Marks</span>
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#how-it-works" class="bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center">
+            See How It Works
+          </a>
+          <a href="/contact" class="bg-[#2D2D2D] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-gray-700 transition-colors text-center">
+            Book a Call
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <!-- Retell widget embed placeholder -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 2: TWIN PILLARS — Build+Operate / Capture+Retain -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="how-it-works" class="bg-white py-20 border-t border-[#DED8D0]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-3">
+          Two Problems. <span class="text-[#E5B73C]">One System.</span>
+        </h2>
+        <p class="text-[#666] max-w-xl mx-auto">
+          Most solutions solve half the problem. Thalux closes the loop.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Pillar A: Build + Operate -->
+        <div class="p-8 rounded-xl border border-[#DED8D0] bg-[#F5F4F0] hover:border-[#E5B73C]/40 transition-colors">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-extrabold text-sm">A</span>
+            <h3 class="font-['Manrope'] font-bold text-xl text-[#2D2D2D]">Build + Operate</h3>
+          </div>
+          <p class="text-[#333] leading-relaxed text-sm">
+            Thalux doesn't hand you a finished product and walk away. We build your
+            digital front door, then we run it — monitoring, updating, maintaining
+            the system so you don't have to think about it.
+          </p>
+          <p class="mt-3 text-xs text-gray-400">
+            Your shop stays focused on the work. The digital side stays managed.
+          </p>
+        </div>
+        <!-- Pillar B: Capture + Retain -->
+        <div class="p-8 rounded-xl border border-[#DED8D0] bg-[#F5F4F0] hover:border-[#E5B73C]/40 transition-colors">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-extrabold text-sm">B</span>
+            <h3 class="font-['Manrope'] font-bold text-xl text-[#2D2D2D]">Capture + Retain</h3>
+          </div>
+          <p class="text-[#333] leading-relaxed text-sm">
+            Every lead counts. Thalux captures every call, web inquiry, and
+            walk-in that comes your way — then follows up so nothing falls through.
+            From AI call handling to follow-up that actually happens.
+          </p>
+          <p class="mt-3 text-xs text-gray-400">
+            No more lost voicemails. No more forgotten callbacks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 3: CONTRAST MATRIX — 3-col comparison -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-3">
+          The Difference<br class="md:hidden" /> Is in <span class="text-[#E5B73C]">the Details</span>
+        </h2>
+        <p class="text-[#666] max-w-xl mx-auto">
+          A website is table stakes. What happens after launch is everything.
+        </p>
+      </div>
+
+      <!-- Matrix — scrollable only as fallback, designed to fit -->
+      <div class="overflow-x-auto -mx-6 sm:mx-0">
+        <div class="min-w-[320px] sm:min-w-0 px-6 sm:px-0">
+          <!-- Header row -->
+          <div class="grid grid-cols-3 gap-3 mb-3 sm:mb-4">
+            <div class="hidden"></div>
+            <div class="text-center">
+              <div class="inline-block px-4 py-2 bg-[#E5B73C] text-white font-['Manrope'] font-bold text-xs uppercase tracking-wider rounded-md">
+                Thalux
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="inline-block px-4 py-2 bg-[#F5F4F0] text-[#666] font-['Manrope'] font-bold text-xs uppercase tracking-wider rounded-md border border-[#DED8D0]">
+                Traditional Agency
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="inline-block px-4 py-2 bg-[#F5F4F0] text-[#666] font-['Manrope'] font-bold text-xs uppercase tracking-wider rounded-md border border-[#DED8D0]">
+                DIY Tools
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 1: Ongoing Management -->
+          <div class="grid grid-cols-3 gap-3 mb-3">
+            <div class="flex items-center font-['Manrope'] font-bold text-[#2D2D2D] text-xs sm:text-sm min-h-[60px]">
+              <span class="text-[#E5B73C] mr-2">01</span> Ongoing Management
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[rgba(229,183,60,0.06)] border border-[#E5B73C]/20 text-[#333] text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              We manage it so you don't have to. Updates, monitoring, maintenance — included.
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[#F5F4F0] border border-[#DED8D0] text-gray-400 text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              One-time handoff. After launch, you're on your own.
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[#F5F4F0] border border-[#DED8D0] text-gray-400 text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              You are the maintenance team. Every update is your time.
+            </div>
+          </div>
+
+          <!-- Row 2: True Cost -->
+          <div class="grid grid-cols-3 gap-3 mb-3">
+            <div class="flex items-center font-['Manrope'] font-bold text-[#2D2D2D] text-xs sm:text-sm min-h-[60px]">
+              <span class="text-[#E5B73C] mr-2">02</span> True Cost
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[rgba(229,183,60,0.06)] border border-[#E5B73C]/20 text-[#333] text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              One predictable monthly fee. No surprise bills for changes or fixes.
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[#F5F4F0] border border-[#DED8D0] text-gray-400 text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              Low upfront, but every change is a new invoice. Hidden time costs add up fast.
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[#F5F4F0] border border-[#DED8D0] text-gray-400 text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              Cheap tools, expensive hours. Your time spent learning and fixing has no sticker price.
+            </div>
+          </div>
+
+          <!-- Row 3: Customization -->
+          <div class="grid grid-cols-3 gap-3">
+            <div class="flex items-center font-['Manrope'] font-bold text-[#2D2D2D] text-xs sm:text-sm min-h-[60px]">
+              <span class="text-[#E5B73C] mr-2">03</span> Customization
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[rgba(229,183,60,0.06)] border border-[#E5B73C]/20 text-[#333] text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              Built for your specific shop, your services, your way of working.
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[#F5F4F0] border border-[#DED8D0] text-gray-400 text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              You get what every other client gets. Template with your logo swapped in.
+            </div>
+            <div class="flex items-center justify-center p-3 sm:p-4 rounded-lg bg-[#F5F4F0] border border-[#DED8D0] text-gray-400 text-xs sm:text-sm text-center leading-relaxed min-h-[60px]">
+              One-size-fits-all templates. You adapt your business to fit the tool.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- TESTIMONIAL (keep from existing site) -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="bg-white py-20 border-t border-[#DED8D0]">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="pl-6 md:pl-8 border-l-4 border-[#E5B73C]">
+        <blockquote class="font-['Manrope'] text-xl md:text-2xl leading-relaxed text-[#2D2D2D] mb-6">
+          &ldquo;[TESTIMONIAL QUOTE — TJ Schaffer, CV Automotive — INSERT WHEN RECEIVED]&rdquo;
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#DED8D0] flex items-center justify-center text-sm font-bold text-[#666]">TJ</div>
+          <div>
+            <div class="font-['Manrope'] font-bold text-sm">TJ Schaffer</div>
+            <div class="text-xs text-[#666]">Owner — CV Automotive, Lancaster County PA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 4: OUTCOME ENGINE — 3-step process + cost-of-inaction close -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Step header -->
+      <div class="text-center mb-14">
+        <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-3">
+          From Invisible<br class="md:hidden" /> to <span class="text-[#E5B73C]">Unmissable</span>
+        </h2>
+        <p class="text-[#666] max-w-xl mx-auto">
+          Three steps. No fluff. A system that works while you work.
+        </p>
+      </div>
+
+      <!-- 3-Step Process -->
+      <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mb-20">
+        <!-- Step 1: Discovery -->
+        <div class="p-6 sm:p-8 rounded-xl border border-[#DED8D0] bg-white">
+          <span class="block mb-4 font-['Manrope'] font-extrabold text-5xl text-[rgba(229,183,60,0.15)] leading-none">01</span>
+          <h3 class="font-['Manrope'] font-bold text-xl text-[#2D2D2D] mb-3">Discovery</h3>
+          <p class="text-[#333] text-sm leading-relaxed">
+            We learn your shop, your customers, and what makes you different.
+            No questionnaires. No templates. We watch how you work.
+          </p>
+          <div class="mt-4 pt-4 border-t border-[#DED8D0]">
+            <span class="text-[#E5B73C] font-['Manrope'] font-bold text-xs uppercase tracking-wider">You get</span>
+            <p class="text-[#333] text-sm mt-1">A plan that fits your actual business, not a category.</p>
+          </div>
+        </div>
+
+        <!-- Step 2: Build -->
+        <div class="p-6 sm:p-8 rounded-xl border border-[#DED8D0] bg-white">
+          <span class="block mb-4 font-['Manrope'] font-extrabold text-5xl text-[rgba(229,183,60,0.15)] leading-none">02</span>
+          <h3 class="font-['Manrope'] font-bold text-xl text-[#2D2D2D] mb-3">Build</h3>
+          <p class="text-[#333] text-sm leading-relaxed">
+            Your digital front door goes live — website, call handling, lead capture,
+            everything connected. Built for your shop, not from a shelf.
+          </p>
+          <div class="mt-4 pt-4 border-t border-[#DED8D0]">
+            <span class="text-[#E5B73C] font-['Manrope'] font-bold text-xs uppercase tracking-wider">You get</span>
+            <p class="text-[#333] text-sm mt-1">A working system that generates leads before you know it's there.</p>
+          </div>
+        </div>
+
+        <!-- Step 3: Launch & Support -->
+        <div class="p-6 sm:p-8 rounded-xl border border-[#DED8D0] bg-white">
+          <span class="block mb-4 font-['Manrope'] font-extrabold text-5xl text-[rgba(229,183,60,0.15)] leading-none">03</span>
+          <h3 class="font-['Manrope'] font-bold text-xl text-[#2D2D2D] mb-3">Launch &amp; Support</h3>
+          <p class="text-[#333] text-sm leading-relaxed">
+            Live and managed. We monitor, update, and maintain everything.
+            You don't call us when something breaks — we catch it first.
+          </p>
+          <div class="mt-4 pt-4 border-t border-[#DED8D0]">
+            <span class="text-[#E5B73C] font-['Manrope'] font-bold text-xs uppercase tracking-wider">You get</span>
+            <p class="text-[#333] text-sm mt-1">Peace of mind. The system runs. You run your business.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cost-of-Inaction Close -->
+      <div class="max-w-3xl mx-auto text-center p-10 sm:p-14 rounded-2xl bg-white border border-[#DED8D0] shadow-sm">
+        <h3 class="font-['Manrope'] text-2xl sm:text-3xl font-bold text-[#2D2D2D] mb-6">
+          What Happens If You Wait?
+        </h3>
+        <p class="text-xl sm:text-2xl font-['Manrope'] font-extrabold text-[#E5B73C] leading-tight">
+          "Every missed call is a job that went to someone else."
+        </p>
+        <div class="mt-8 pt-8 border-t border-[#DED8D0]">
+          <a href="/contact" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors">
+            Stop Missing Calls
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 5: GATEKEEPER CTA — Final book-a-call -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="bg-[#2D2D2D] py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <!-- Decorative gold line -->
+      <div class="w-16 h-0.5 bg-[#E5B73C]/40 mx-auto mb-10" aria-hidden="true"></div>
+
+      <h2 class="font-['Manrope'] text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+        Ready to Stop<br />
+        <span class="text-[#E5B73C]">Losing Jobs to Voicemail?</span>
+      </h2>
+
+      <p class="text-gray-400 leading-relaxed max-w-lg mx-auto mb-4">
+        Thalux only takes on a limited number of new clients each month.
+        Not because we have to — because every shop deserves a system that's
+        built right, managed well, and actually works.
+      </p>
+
+      <p class="text-gray-500 text-sm leading-relaxed max-w-md mx-auto mb-12">
+        That takes time. We'd rather do a few shops well than a hundred halfway.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="bg-[#E5B73C] text-white px-10 py-5 rounded-md font-['Manrope'] font-bold text-xl hover:bg-[#CDA333] transition-colors shadow-lg">
+          Book a Call
+        </a>
+        <a href="tel:+171****0566" class="bg-transparent text-white border border-white/30 px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-white hover:text-[#2D2D2D] transition-colors">
+          (717) 537-0566
+        </a>
+      </div>
+
+      <p class="mt-8 text-gray-500 text-xs max-w-sm mx-auto leading-relaxed">
+        No pitch decks. No hard sell. Just a conversation about what your shop needs
+        and whether we're the right fit to build it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- TRUST SECTION — reframed: Thalux-first, not founder-first -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="bg-white py-16 border-t border-[#DED8D0]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-8">
+        Built from the inside out.
+      </h2>
+      <p class="text-[#333] leading-relaxed max-w-2xl mx-auto">
+        Thalux was built by people who've spent their careers in trade shops
+        and automotive. We know what it feels like to be under a car when the
+        phone rings — because we've lived it. Every system we build starts
+        from that understanding. That's not a marketing line. It's where this
+        company started.
+      </p>
+      <p class="text-[#666] text-sm leading-relaxed max-w-xl mx-auto mt-4">
+        Our founder spent 41 years in the trade — including Tesla — and built
+        the first version of Thalux for himself, because nothing on the market
+        was built for people who work with their hands.
+      </p>
+      <a href="/about" class="inline-block mt-6 text-[#E5B73C] font-semibold text-sm hover:underline">
+        Read the full story →
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- LEAD MAGNET — Free Visibility Audit -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="bg-[#F5F4F0] py-20 border-t border-[#DED8D0]">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="bg-white rounded-xl border border-[#DED8D0] p-10 md:p-12 shadow-sm">
+        <h2 class="font-['Manrope'] text-2xl md:text-3xl font-bold text-[#2D2D2D] mb-4">
+          Not sure where you stand?<br />Find out for free.
+        </h2>
+        <p class="text-[#333] leading-relaxed max-w-lg mx-auto mb-8">
+          We'll audit your business's current online visibility — Google presence, website health, missed call exposure — and show you exactly where you're losing customers before you ever talk to us. No pitch. No obligation. Just your numbers.
+        </p>
+        <a href="/contact" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors">
+          Get Your Free Visibility Audit
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>

@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Thalux AI Brand Palette — LOCKED Jun 16, 2026 */
+/* Gold: #E5B73C (Bright Gold) — action accent */
+/* Teal: #0B7B8A — logo identity only */
+/* Warm Canvas: #F5F4F0 — page background */
+/* Charcoal: #2D2D2D — text authority */
+
+:root {
+  --color-gold: #E5B73C;
+  --color-gold-hover: #CDA333;
+  --color-gold-ghost: rgba(229, 183, 60, 0.12);
+  --color-teal: #0B7B8A;
+  --color-canvas: #F5F4F0;
+  --color-charcoal: #2D2D2D;
+  --color-dark-subtext: #333333;
+  --color-border: #DED8D0;
+}
+
+/* Gold utility classes */
+.text-gold { color: var(--color-gold); }
+.bg-gold { background-color: var(--color-gold); }
+.border-gold { border-color: var(--color-gold); }
+.hover\:bg-gold-hover:hover { background-color: var(--color-gold-hover); }
