@@ -1,0 +1,31 @@
+bank_id,legal_name,web_address,total_assets_thousands,total_deposits_thousands,net_income_thousands,hq_city,hq_state,total_branches,thalux_asset_tier,extracted_at
+10004,Ergo Bank,www.ergobank.com,263059,221684,239,Markesan,Wisconsin,6,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10011,Woodford State Bank,www.woodfordstatebank.com,509650,393758,1974,Monroe,Wisconsin,6,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10012,The Portage County Bank,http://www.PORTAGECOUNTYBANK.COM,212581,176573,705,Almond,Wisconsin,4,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10015,Security Bank,www.securityonlinebank.com,241081,204562,998,New Auburn,Wisconsin,4,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10044,National Exchange Bank and Trust,https://www.nebat.com,2933056,2317148,12266,Fond Du Lac,Wisconsin,34,Tier 2: Regional Bank,2026-06-26T14:42:54Z
+1005,Isabella Bank,www.isabellabank.com,2203614,1890688,5754,Mount Pleasant,Michigan,32,Tier 2: Regional Bank,2026-06-26T14:42:54Z
+10055,First Southern Bank,www.fsb-bank.bank,334787,301581,775,Waycross,Georgia,7,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10057,Bank of Hancock County,www.bankofhancock.com,84575,70975,77,Sparta,Georgia,1,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10072,Planters and Citizens Bank,http://www.pcbank.net,145493,123806,130,Camilla,Georgia,1,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10074,Apex Banking Company of Georgia,www.apexga.bank,73232,66833,96,Cleveland,Georgia,2,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10075,Peoples State Bank of Colfax,http://www.psbofcolfax.com,47037,41151,161,Colfax,Illinois,1,Tier 1: Community Bank,2026-06-26T14:42:54Z
+1008,Bank Michigan,http://www.bankmichigan.bank,159724,133330,176,Brooklyn,Michigan,3,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10101,The Napoleon State Bank,www.napoleonstatebank.com,507010,448951,1852,Napoleon,Indiana,7,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10111,Ohnward Bank & Trust,www.ohnwardbank.bank,489249,408837,1663,Cascade,Iowa,6,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10118,Leighton State Bank,www.leightonbank.com,293411,248766,1223,Pella,Iowa,4,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10120,American Trust and Savings Bank,www.atsb-lowden.com,28689,23629,-67,Lowden,Iowa,1,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10121,Liberty Trust & Savings Bank,www.mylibertytrust.com,182910,147545,708,Durant,Iowa,3,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10122,Farmers Savings Bank & Trust,http://www.fsb-traer.com,232530,212260,711,Traer,Iowa,2,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10125,Citizens Savings Bank,www.citizensbankia.com,175037,159377,381,Anamosa,Iowa,2,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10127,Success Bank,www.success.bank,267113,227009,1197,Bloomfield,Iowa,3,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10132,Exchange State Bank,www.esb1.com,146440,117570,739,Ames,Iowa,3,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10137,The Commercial Bank of Grayson,cbgrayson.com,244276,219150,416,Grayson,Kentucky,3,Tier 1: Community Bank,2026-06-26T14:42:54Z
+1014,ChoiceOne Bank,WWW.CHOICEONE.BANK,4391138,3671307,14296,Sparta,Michigan,51,Tier 2: Regional Bank,2026-06-26T14:42:54Z
+10157,The Shelby State Bank,www.shelbybank.com,391544,346438,780,Shelby,Michigan,10,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10159,First State Bank and Trust,https://www.fsbt.com,471002,429334,1906,Bayport,Minnesota,4,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10160,VersaBank USA National Association,www.versabankusa.com,782851,557388,2223,Holdingford,Minnesota,1,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10162,First State Bank Minnesota,www.fsbminnesota.com,105200,92226,489,Le Roy,Minnesota,2,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10163,Security State Bank of Marine,www.themarinebank.com,235431,209683,1359,Marine On St. Croix,Minnesota,4,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10165,Farmers and Merchants State Bank of Pierz,www.fmpierz.com,330978,307666,1163,Pierz,Minnesota,3,Tier 1: Community Bank,2026-06-26T14:42:54Z
+10167,Citizens State Bank of Roseau,www.citizensros.com,286018,250263,1055,Roseau,Minnesota,1,Tier 1: Community Bank,2026-06-26T14:42:54Z

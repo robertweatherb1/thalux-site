@@ -1,0 +1,199 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="BankIntel — US Active Banking Directory">
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-12">
+    <div class="md:grid md:grid-cols-2 md:gap-16 items-start">
+      <div>
+        <span class="inline-block bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full mb-5 uppercase tracking-wider">
+          ⚡ Data Product
+        </span>
+        <h1 class="font-['Manrope'] text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#2D2D2D] mb-4">
+          Thalux <span class="text-[#E5B73C]">BankIntel</span><br />
+          US Active Banking Directory
+        </h1>
+        <p class="text-[#333] text-lg leading-relaxed mb-4">
+          Every active FDIC-insured institution in the United States — cleaned, enriched, and ready to import into Salesforce, HubSpot, Outreach, or any CRM that accepts CSV.
+        </p>
+        <p class="text-sm text-[#666] leading-relaxed">
+          Stop parsing raw Call Reports. Stop paying $25K+/year for data vendors. This is the same data, pre-cleaned and enriched, at a fraction of the cost.
+        </p>
+      </div>
+      <div class="mt-8 md:mt-0">
+        <!-- Metrics -->
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <div class="bg-white border border-[#DED8D0] rounded-xl p-5 text-center">
+            <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">4,185</div>
+            <div class="text-xs text-[#666] mt-1">Active Institutions</div>
+          </div>
+          <div class="bg-white border border-[#DED8D0] rounded-xl p-5 text-center">
+            <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">100%</div>
+            <div class="text-xs text-[#666] mt-1">Web Addresses Matched</div>
+          </div>
+          <div class="bg-white border border-[#DED8D0] rounded-xl p-5 text-center">
+            <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">11</div>
+            <div class="text-xs text-[#666] mt-1">CRM-Ready Columns</div>
+          </div>
+          <div class="bg-white border border-[#DED8D0] rounded-xl p-5 text-center">
+            <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">0</div>
+            <div class="text-xs text-[#666] mt-1">Missing Records</div>
+          </div>
+        </div>
+        <p class="text-xs text-[#999] text-center">Data sourced from FDIC Institution Directory API. Enriched by Thalux AI inference engine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-white py-16 border-t border-b border-[#DED8D0]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Choose Your Plan</h2>
+      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Same enriched data. Two ways to buy.</p>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <!-- One-Time -->
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-8 hover:border-[#E5B73C] transition-colors">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">One-Time Snapshot</div>
+          <div class="font-['Manrope'] font-extrabold text-4xl text-[#2D2D2D] mb-1">$49 <span class="text-base font-medium text-[#666]">USD</span></div>
+          <div class="text-sm text-[#666] mb-6">One-time purchase</div>
+          <ul class="space-y-3 mb-8 text-sm">
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Full 4,185-record enriched CSV</li>
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Point-in-time extraction</li>
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Immediate digital delivery</li>
+          </ul>
+          <button class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors cursor-pointer border-none"
+            data-price="price_1TmdjLAEAgb5SjCbCIWATvDD">
+            Buy Now — $49
+          </button>
+        </div>
+        <!-- Monthly -->
+        <div class="bg-white border-2 border-[#E5B73C] rounded-xl p-8 shadow-sm">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">Monthly Subscription</div>
+          <div class="font-['Manrope'] font-extrabold text-4xl text-[#2D2D2D] mb-1">$99 <span class="text-base font-medium text-[#666]">USD</span></div>
+          <div class="text-sm text-[#666] mb-6">per month</div>
+          <ul class="space-y-3 mb-8 text-sm">
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Fresh extraction every 30 days</li>
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Incremental change log</li>
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Preferential email support</li>
+            <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Cancel anytime — keep last snapshot</li>
+          </ul>
+          <button class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors cursor-pointer border-none"
+            data-price="price_1TmdjLAEAgb5SjCblWGsklMQ">
+            Subscribe — $99/mo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schema Table -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-2">Exact Schema</h2>
+      <p class="text-[#666] mb-8">Download the <a href="/data/fdic-bankintel/sample.csv" class="text-[#E5B73C] underline">free 30-row sample</a> to inspect before purchasing.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white border border-[#DED8D0] rounded-xl overflow-hidden">
+          <thead>
+            <tr class="bg-[#2D2D2D] text-white">
+              <th class="text-left py-3 px-4 font-['Manrope'] font-semibold text-xs uppercase tracking-wider">Column</th>
+              <th class="text-left py-3 px-4 font-['Manrope'] font-semibold text-xs uppercase tracking-wider">Description</th>
+              <th class="text-left py-3 px-4 font-['Manrope'] font-semibold text-xs uppercase tracking-wider">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">bank_id</td><td class="py-3 px-4 text-sm text-[#333]">FDIC Certificate ID</td><td class="py-3 px-4 text-sm text-[#666]">10004</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">legal_name</td><td class="py-3 px-4 text-sm text-[#333]">Official institution legal name</td><td class="py-3 px-4 text-sm text-[#666]">JPMorgan Chase Bank, NA</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">web_address</td><td class="py-3 px-4 text-sm text-[#333]">Verified institution website</td><td class="py-3 px-4 text-sm text-[#666]">www.jpmorganchase.com</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">total_assets_thousands</td><td class="py-3 px-4 text-sm text-[#333]">Total assets ($thousands)</td><td class="py-3 px-4 text-sm text-[#666]">3,916,571,000</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">total_deposits_thousands</td><td class="py-3 px-4 text-sm text-[#333]">Total deposits ($thousands)</td><td class="py-3 px-4 text-sm text-[#666]">2,684,000,000</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">net_income_thousands</td><td class="py-3 px-4 text-sm text-[#333]">Net income ($thousands)</td><td class="py-3 px-4 text-sm text-[#666]">49,416,000</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">hq_city</td><td class="py-3 px-4 text-sm text-[#333]">Headquarters city</td><td class="py-3 px-4 text-sm text-[#666]">Columbus</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">hq_state</td><td class="py-3 px-4 text-sm text-[#333]">Headquarters state</td><td class="py-3 px-4 text-sm text-[#666]">Ohio</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">total_branches</td><td class="py-3 px-4 text-sm text-[#333]">Number of branch locations</td><td class="py-3 px-4 text-sm text-[#666]">5,360</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">thalux_asset_tier</td><td class="py-3 px-4 text-sm text-[#333]">Enriched asset classification</td><td class="py-3 px-4 text-sm text-[#666]">Tier 4: Enterprise System</td></tr>
+            <tr><td class="py-3 px-4 font-['Manrope'] font-semibold text-sm">extracted_at</td><td class="py-3 px-4 text-sm text-[#333]">ISO 8601 extraction timestamp</td><td class="py-3 px-4 text-sm text-[#666]">2026-06-26T14:42:54Z</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="bg-white py-16 border-t border-[#DED8D0]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-10 text-center">Who This Is For</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="border border-[#DED8D0] rounded-xl p-6 bg-white">
+          <div class="font-['Manrope'] font-bold mb-2 text-[#2D2D2D]">🏦 &nbsp;FinTech BDRs / SDRs</div>
+          <p class="text-sm text-[#666] leading-relaxed">Prospect banks by asset tier, region, and branch count.</p>
+        </div>
+        <div class="border border-[#DED8D0] rounded-xl p-6 bg-white">
+          <div class="font-['Manrope'] font-bold mb-2 text-[#2D2D2D]">💳 &nbsp;Payments Sales</div>
+          <p class="text-sm text-[#666] leading-relaxed">Identify banks for merchant acquiring, card issuing, or treasury.</p>
+        </div>
+        <div class="border border-[#DED8D0] rounded-xl p-6 bg-white">
+          <div class="font-['Manrope'] font-bold mb-2 text-[#2D2D2D]">🔗 &nbsp;BaaS Platforms</div>
+          <p class="text-sm text-[#666] leading-relaxed">Map the competitive landscape for banking integrations.</p>
+        </div>
+        <div class="border border-[#DED8D0] rounded-xl p-6 bg-white">
+          <div class="font-['Manrope'] font-bold mb-2 text-[#2D2D2D]">📊 &nbsp;Market Intelligence</div>
+          <p class="text-sm text-[#666] leading-relaxed">Track branch density, regional concentration, and asset shifts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#2D2D2D] py-20 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="w-16 h-0.5 bg-[rgba(229,183,60,0.4)] mx-auto mb-10"></div>
+      <h2 class="font-['Manrope'] text-3xl font-bold text-white mb-4">
+        Ready to <span class="text-[#E5B73C]">Build Your Pipeline?</span>
+      </h2>
+      <p class="text-[#999] max-w-lg mx-auto mb-10 leading-relaxed">
+        Download the free sample to inspect the data quality. When you're ready, buy the full dataset.
+      </p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="/data/fdic-bankintel/sample.csv" class="inline-block bg-transparent text-white border-2 border-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-white hover:text-[#2D2D2D] transition-colors">
+          Download Free Sample
+        </a>
+        <button class="checkout-btn inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors cursor-pointer border-none"
+          data-price="price_1TmdjLAEAgb5SjCbCIWATvDD">
+          Buy Full Dataset — $49
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelectorAll('.checkout-btn').forEach(btn => {
+    btn.addEventListener('click', async function() {
+      const priceId = this.dataset.price;
+      const originalText = this.textContent;
+      this.disabled = true;
+      this.textContent = 'Opening checkout...';
+      try {
+        const resp = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ price_id: priceId }),
+        });
+        const data = await resp.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert('Error creating checkout. Please try again.');
+          this.disabled = false;
+          this.textContent = originalText;
+        }
+      } catch (err) {
+        alert('Network error. Please try again.');
+        this.disabled = false;
+        this.textContent = originalText;
+      }
+    });
+  });
+</script>

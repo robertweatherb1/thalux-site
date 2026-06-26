@@ -1,0 +1,22 @@
+# Netlify config for Thalux AI site
+# Deployed from ~/projects/thalux-site/
+
+[[redirects]]
+  from = "/api/portal"
+  to = "/.netlify/functions/portal"
+  status = 200
+
+[[redirects]]
+  from = "/api/portal/*"
+  to = "/.netlify/functions/portal"
+  status = 200
+
+[[redirects]]
+  from = "/admin/invoices"
+  to = "/.netlify/functions/admin-invoices"
+  status = 200
+
+[[redirects]]
+  from = "/api/create-checkout"
+  to = "/.netlify/functions/create-checkout"
+  status = 200
