@@ -1,6 +1,6 @@
 # Thalux AI — Strategic Blueprint
 > Living truth document. Auto-updated by Nous. Read by Claude.ai at session start.
-> Last updated: 2026-06-27 ~19:00 (full backfill — see Changelog)
+> Last updated: 2026-06-27 14:58
 
 ---
 
@@ -52,7 +52,7 @@ Boring is fine. Profitable is mandatory.
 ### Invoiced
 | Invoice | Client | Amount | Status |
 |---------|--------|--------|--------|
-| INV-001 (THLX-0002) | CV Automotive | $195 | Sent — due 2026-07-01 — **unpaid** |
+| INV-001 | CV Automotive | $195 | Sent — due 2026-07-01 |
 
 ---
 
@@ -61,7 +61,7 @@ Boring is fine. Profitable is mandatory.
 | Metric | Value |
 |--------|-------|
 | Current MRR | $0 |
-| Monthly Burn | ~$159/mo (Netlify $0, OpenRouter $178, Twilio $8.50, Namecheap $15, ngrok $0) |
+| Monthly Burn | ~$159/mo |
 | Runway | Sep 2026 |
 | OpenRouter Limit | $350/mo |
 | OpenRouter Remaining | $224.96 (live as of Jun 27 17:47) |
