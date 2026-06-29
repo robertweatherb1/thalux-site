@@ -2,7 +2,7 @@
 // Creates a Stripe Checkout session for $49 one-time or $99/mo subscription
 
 const STRIPE_API = 'https://api.stripe.com/v1';
-const SITE_URL = process.env.URL || 'https://thaluxai.netlify.app';
+const SITE_URL = (process.env.URL || 'https://thalux-ai.netlify.app').replace(/\/$/, '');
 
 const headers = {
   'Access-Control-Allow-Origin': '*',

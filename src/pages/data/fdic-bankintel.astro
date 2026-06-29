@@ -63,10 +63,10 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Immediate digital delivery</li>
           </ul>
-          <a href="https://buy.stripe.com/bJecN45TA09EdydfW7dwc00"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center inline-block">
+          <button onclick="checkout('price_1TmdjLAEAgb5SjCbCIWATvDD')"
+             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
             Buy Now — $49
-          </a>
+          </button>
         </div>
         <!-- Monthly -->
         <div class="bg-white border-2 border-[#E5B73C] rounded-xl p-8 shadow-sm">
@@ -79,10 +79,10 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Preferential email support</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Cancel anytime — keep last snapshot</li>
           </ul>
-          <a href="https://buy.stripe.com/fZu00i6XE9Kecu95htdwc01"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center inline-block">
+          <button onclick="checkout('price_1TmdjLAEAgb5SjCblWGsklMQ')"
+             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
             Subscribe — $99/mo
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -165,6 +165,22 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
   </section>
-</Layout>
 
+  <!-- Checkout Script -->
+  <script>
+    async function checkout(priceId) {
+      try {
+        const resp = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ price_id: priceId })
+        });
+        if (!resp.ok) throw new Error('Checkout failed');
+        const data = await resp.json();
+        if (data.url) window.location.href = data.url;
+      } catch (e) {
+        alert('Checkout unavailable. Please try again or contact support.');
+      }
+    }
+  </script>
 </Layout>

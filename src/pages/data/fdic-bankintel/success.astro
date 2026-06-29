@@ -1,0 +1,32 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="BankIntel — Download Your Dataset">
+  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <span class="text-green-600 text-3xl">&#10003;</span>
+    </div>
+    <h1 class="font-['Manrope'] text-3xl font-extrabold text-[#2D2D2D] mb-4">Payment Successful</h1>
+    <p class="text-[#666] mb-8">Your BankIntel dataset is ready to download. Thank you for your purchase.</p>
+
+    <div class="bg-white border border-[#DED8D0] rounded-xl p-8 mb-8 max-w-md mx-auto text-left">
+      <p class="text-sm text-[#666] mb-4">Your purchase includes:</p>
+      <ul class="space-y-2 text-sm mb-6">
+        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> 4,185 FDIC-insured institution records</li>
+        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> Cleaned & enriched with asset tier classification</li>
+        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> 11 CRM-ready columns</li>
+        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> Single commercial license</li>
+      </ul>
+
+      <a href="/data/fdic-bankintel/BankIntel_Full_Dataset.csv"
+         class="block w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center"
+         download>
+        &#11015; Download Full Dataset (CSV)
+      </a>
+    </div>
+
+    <p class="text-xs text-[#999]">Need help? <a href="/contact" class="text-[#E5B73C] underline">Contact support</a></p>
+    <p class="text-xs text-[#999] mt-2"><a href="/data/fdic-bankintel" class="text-[#E5B73C] underline">Back to BankIntel</a></p>
+  </section>
+</Layout>
