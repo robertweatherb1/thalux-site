@@ -213,7 +213,7 @@ async function runSelfTest() {
   let stripe;
   try {
     const stripePkg = await import('stripe');
-    stripe = stripePkg.default(stripeKey, { apiVersion: '2025-02-24.acacia' });
+    stripe = new stripePkg.default(stripeKey, { apiVersion: '2025-02-24.acacia' });
   } catch {
     console.log(`  ${FAIL} stripe npm package not installed — run: npm install stripe`);
     failed++;
