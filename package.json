@@ -12,8 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.9",
     "@tailwindcss/vite": "^4.3.1",
     "astro": "^6.4.7",
+    "stripe": "^22.3.0",
     "tailwindcss": "^4.3.1"
   }
 }

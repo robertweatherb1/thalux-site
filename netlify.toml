@@ -29,3 +29,13 @@
   from = "/api/stripe-webhook"
   to = "/.netlify/functions/stripe-webhook"
   status = 200
+
+[[redirects]]
+  from = "/api/download/bankintel"
+  to = "/.netlify/functions/download-bankintel"
+  status = 200
+
+[[redirects]]
+  from = "/api/download/bankintel/*"
+  to = "/.netlify/functions/download-bankintel"
+  status = 200

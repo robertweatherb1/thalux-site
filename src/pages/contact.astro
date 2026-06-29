@@ -15,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Contact Form -->
       <div class="bg-white rounded-xl border border-[#DED8D0] p-8">
         <h2 class="font-['Manrope'] text-xl font-bold mb-6">Send us a message</h2>
-        <form action="/thank-you" method="GET" class="space-y-5">
+        <form action="/thank-you" method="POST" netlify data-netlify="true" name="contact" class="space-y-5">
           <div>
             <label for="name" class="block text-sm font-medium text-[#333333] mb-1">Name</label>
             <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-md border border-[#DED8D0] bg-[#F5F4F0] text-[#2D2D2D] text-sm focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C]" placeholder="Your name" />

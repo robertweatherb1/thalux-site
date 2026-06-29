@@ -167,6 +167,32 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- Checkout Script -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "BankIntel — US Active Banking Directory",
+    "description": "Every active FDIC-insured institution in the United States — cleaned, enriched, and ready to import into any CRM.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One-Time Snapshot",
+        "price": "49",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Subscription",
+        "price": "99",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      }
+    ]
+  })} />
   <script>
     async function checkout(priceId) {
       try {
