@@ -84,7 +84,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-2">Exact Schema (18 columns)</h2>
-      <p class="text-[#666] mb-8">Full dataset includes latitude, longitude, parcel APN, and loan metadata for every filing.</p>
+      <p class="text-[#666] mb-8">Download the <a href="/data/foreclosure-intel/sample.csv" class="text-[#E5B73C] underline">free sample</a> to inspect before purchasing. Full dataset includes latitude, longitude, parcel APN, and loan metadata for every filing.</p>
       <div class="overflow-x-auto">
         <table class="w-full bg-white border border-[#DED8D0] rounded-xl overflow-hidden">
           <thead>
@@ -212,6 +212,34 @@ import Layout from '../../layouts/Layout.astro';
       </button>
     </div>
   </section>
+
+  <!-- Product Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "ForeclosureIntel — Default & NOD Records",
+    "description": "Aggregated public-record foreclosure filings and Notices of Default from county recorder offices nationwide. Every record includes property parcel ID, filing date, lender/trustee, original loan amount, and current status.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One-Time Snapshot",
+        "price": "49",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Subscription",
+        "price": "99",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      }
+    ]
+  })} />
 
   <!-- Checkout Script -->
   <script>

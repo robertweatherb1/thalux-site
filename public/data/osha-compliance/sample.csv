@@ -1,0 +1,11 @@
+incident_id,report_type,establishment_name,naics_code,state,incident_date,injury_type,body_part,days_away_from_work,days_job_restriction,severity_code,employee_count,trir_calc,severe_injury_flag,data_source
+OSHA-2026-091234,300 Log,Acme Fabrication LLC,332312,TX,2026-04-12,Fracture,Left Hand / Wrist,14,0,Moderate,47,2.1,FALSE,OSHA SOII
+OSHA-2026-091235,300 Log,Pinnacle Construction Inc.,236220,CA,2026-05-28,Strain,Lower Back,7,3,Moderate,112,3.4,FALSE,OSHA SOII
+OSHA-2026-091236,300 Log,Sunshine Janitorial Services,561720,FL,2026-03-15,Laceration,Right Forearm,3,0,Minor,23,1.8,FALSE,OSHA SOII
+OSHA-2026-091237,300 Log,Great Lakes Medical Center,622110,IL,2026-06-02,Needlestick,Left Index Finger,0,0,Minor,850,5.2,FALSE,OSHA SOII
+OSHA-2026-091238,300 Log,Riverbend Refinery Co,493110,OH,2026-01-20,Burn,Right Arm,21,14,Severe,310,6.7,TRUE,OSHA Severe Injury
+OSHA-2026-091239,300 Log,Premier Roofing & Sheet Metal,238220,PA,2026-02-08,Amputation,Right Thumb,42,0,Severe,18,9.1,TRUE,OSHA Severe Injury
+OSHA-2026-091240,300 Log,Auto Parts Manufacturing Inc,336111,MI,2026-05-30,Crushing Injury,Left Foot,28,21,Severe,520,7.3,TRUE,OSHA Severe Injury
+OSHA-2026-091241,300 Log,Coastal Logistics Warehouse,493110,CA,2026-04-22,Strain,Upper Back,5,2,Moderate,94,2.8,FALSE,OSHA SOII
+OSHA-2026-091242,300 Log,Stone Mountain Quarry,212311,GA,2026-03-30,Fracture,Right Ankle,35,0,Severe,67,8.2,TRUE,OSHA SOII
+OSHA-2026-091243,300 Log,Nordic Fisheries Inc.,114110,AK,2026-05-15,Hypothermia,Systemic,12,0,Moderate,41,4.9,FALSE,OSHA SOII

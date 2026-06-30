@@ -83,7 +83,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-2">Exact Schema (24 columns)</h2>
-      <p class="text-[#666] mb-8">Each permit is linked to the licensed contractor through contractor license number and state board verification.</p>
+      <p class="text-[#666] mb-8">Download the <a href="/data/commercial-permits/sample.csv" class="text-[#E5B73C] underline">free sample</a> to inspect before purchasing. Each permit is linked to the licensed contractor through contractor license number and state board verification.</p>
       <div class="overflow-x-auto">
         <table class="w-full bg-white border border-[#DED8D0] rounded-xl overflow-hidden">
           <thead>
@@ -209,6 +209,33 @@ import Layout from '../../layouts/Layout.astro';
       </button>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "CommercialPermits — Permit & License Data",
+    "description": "Aggregated commercial building permit filings, mechanical permit records, and contractor license data from municipal and state data feeds across all 50 states. Links permits to licensed contractors for construction market intelligence.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One-Time Snapshot",
+        "price": "49",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Subscription",
+        "price": "99",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      }
+    ]
+  })} />
 
   <script>
     async function checkout(productKey) {

@@ -83,7 +83,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-2">Exact Schema (22 columns)</h2>
-      <p class="text-[#666] mb-8">Includes calculated TRIR, days away from work, and severe injury flags for every record.</p>
+      <p class="text-[#666] mb-8">Download the <a href="/data/osha-compliance/sample.csv" class="text-[#E5B73C] underline">free sample</a> to inspect before purchasing. Includes calculated TRIR, days away from work, and severe injury flags for every record.</p>
       <div class="overflow-x-auto">
         <table class="w-full bg-white border border-[#DED8D0] rounded-xl overflow-hidden">
           <thead>
@@ -208,6 +208,33 @@ import Layout from '../../layouts/Layout.astro';
       </button>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "OSHA Compliance — 300 Log & Injury Data",
+    "description": "Aggregated OSHA 300 Log recordable injury data, severe injury reports, and employer summary data across NAICS codes. Structured for EHS benchmarking, loss-run analysis, and risk modeling.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One-Time Snapshot",
+        "price": "49",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Subscription",
+        "price": "99",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-06-29",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Thalux AI" }
+      }
+    ]
+  })} />
 
   <script>
     async function checkout(productKey) {

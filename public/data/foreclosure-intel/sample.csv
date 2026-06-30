@@ -1,0 +1,11 @@
+filing_id,filing_type,county_fips,county_name,state,filing_date,property_address,parcel_apn,original_lender,loan_amount,status,batch_id
+NOD-2026-041239,Notice of Default,06037,Los Angeles,CA,2026-06-15,"1247 Venice Blvd, Los Angeles, CA",4115-017-029,Wells Fargo Bank NA,$487000,Active,2026-06
+NOD-2026-041240,Notice of Default,04013,Maricopa,AZ,2026-06-14,"4520 N Central Ave, Phoenix, AZ",126-09-001A,JPMorgan Chase Bank,$312500,Active,2026-06
+NOD-2026-041241,Notice of Default,17031,Cook,IL,2026-06-14,"320 W Jackson Blvd, Chicago, IL",170310203014,Nationstar Mortgage LLC,$215000,Resolved,2026-06
+NOD-2026-041242,Notice of Default,48201,Harris,TX,2026-06-13,"1001 Fannin St, Houston, TX",048201-123-456,Bank of America NA,$589000,Active,2026-06
+NOD-2026-041243,Notice of Default,12086,Miami-Dade,FL,2026-06-13,"1395 Brickell Ave, Miami, FL",01-2019-045-0010,Freedom Mortgage Corp,$403000,Active,2026-06
+NOD-2026-041244,Notice of Default,42101,Philadelphia,PA,2026-06-12,"1500 Market St, Philadelphia, PA",881234567,Mr. Cooper / Nationstar,$275000,Active,2026-06
+NOD-2026-041245,Notice of Default,53033,King,WA,2026-06-12,"600 4th Ave, Seattle, WA",197620-0015,U.S. Bank NA,$621000,Active,2026-06
+NOD-2026-041246,Notice of Default,06059,Orange,CA,2026-06-11,"333 W Santa Ana Blvd, Santa Ana, CA",009-123-14,Caliber Home Loans,$398000,Active,2026-06
+NOD-2026-041247,Notice of Default,48113,Dallas,TX,2026-06-11,"500 N Akard St, Dallas, TX",0012345678901,NewRez LLC / Shellpoint,$445000,Pending Sale,2026-06
+NOD-2026-041248,Notice of Default,26081,Wayne,MI,2026-06-10,"500 Woodward Ave, Detroit, MI",21001234,Rocket Mortgage LLC,$167000,Active,2026-06

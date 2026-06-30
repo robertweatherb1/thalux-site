@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F5F4F0"/>
+  <!-- Gold accent bar -->
+  <rect y="0" width="1200" height="6" fill="#E5B73C"/>
+  <!-- Brand -->
+  <text x="100" y="200" font-family="'Manrope', 'Helvetica Neue', sans-serif" font-size="72" font-weight="800" fill="#2D2D2D">Thalux<span fill="#E5B73C">AI</span></text>
+  <text x="100" y="260" font-family="'Manrope', 'Helvetica Neue', sans-serif" font-size="28" font-weight="400" fill="#666">Data Products</text>
+  <!-- Product tagline -->
+  <text x="100" y="360" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="20" font-weight="400" fill="#333">ForeclosureIntel · OSHA Compliance · CommercialPermits · BankIntel</text>
+  <!-- Decorative elements -->
+  <rect x="100" y="420" width="40" height="4" fill="#E5B73C"/>
+  <text x="100" y="460" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="16" font-weight="400" fill="#999">thalux.ai</text>
+  <!-- Right-side abstract graphic -->
+  <rect x="750" y="120" width="350" height="150" rx="12" fill="#2D2D2D" opacity="0.05"/>
+  <rect x="780" y="150" width="80" height="8" rx="4" fill="#E5B73C"/>
+  <rect x="780" y="170" width="120" height="8" rx="4" fill="#DED8D0"/>
+  <rect x="780" y="190" width="200" height="8" rx="4" fill="#DED8D0"/>
+  <rect x="780" y="210" width="160" height="8" rx="4" fill="#DED8D0"/>
+</svg>
