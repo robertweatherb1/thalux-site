@@ -22,12 +22,12 @@ const SITE_URL = (process.env.URL || process.env.DEPLOY_URL || 'http://localhost
 const PRODUCT_MAP = {
   'fdic_bankintel_one_time': { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCbCIWATvDD', tier: 'one-time' },
   'fdic_bankintel_monthly':  { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCblWGsklMQ', tier: 'monthly' },
-  'foreclosure_intel_one_time':  { slug: 'foreclosure-intel', price: null, tier: 'one-time' },
-  'foreclosure_intel_monthly':   { slug: 'foreclosure-intel', price: null, tier: 'monthly' },
-  'osha_compliance_one_time':    { slug: 'osha-compliance',  price: null, tier: 'one-time' },
-  'osha_compliance_monthly':     { slug: 'osha-compliance',  price: null, tier: 'monthly' },
-  'commercial_permits_one_time': { slug: 'commercial-permits', price: null, tier: 'one-time' },
-  'commercial_permits_monthly':  { slug: 'commercial-permits', price: null, tier: 'monthly' },
+  'foreclosure_intel_one_time':  { slug: 'foreclosure-intel', price: 'price_1To80QAEAgb5SjCbDvxVSner', tier: 'one-time' },
+  'foreclosure_intel_monthly':   { slug: 'foreclosure-intel', price: 'price_1To80QAEAgb5SjCbSYuJMOBu', tier: 'monthly' },
+  'osha_compliance_one_time':    { slug: 'osha-compliance',  price: 'price_1To80RAEAgb5SjCbH8yTFtek', tier: 'one-time' },
+  'osha_compliance_monthly':     { slug: 'osha-compliance',  price: 'price_1To80RAEAgb5SjCb5kdYyl3v', tier: 'monthly' },
+  'commercial_permits_one_time': { slug: 'commercial-permits', price: 'price_1To80RAEAgb5SjCbAK5nsUe9', tier: 'one-time' },
+  'commercial_permits_monthly':  { slug: 'commercial-permits', price: 'price_1To80SAEAgb5SjCbd5uhBVjY', tier: 'monthly' },
 };
 
 // ─── Handler ───────────────────────────────────────────────────────────────
