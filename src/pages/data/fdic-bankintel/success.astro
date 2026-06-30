@@ -1,32 +1,85 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+// FDIC BankIntel — Purchase Success Page
+// Shown after successful Stripe checkout
+import '../../../styles/global.css';
+import Footer from '../../../components/Footer.astro';
 ---
 
-<Layout title="BankIntel — Download Your Dataset">
-  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
-    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-      <span class="text-green-600 text-3xl">&#10003;</span>
-    </div>
-    <h1 class="font-['Manrope'] text-3xl font-extrabold text-[#2D2D2D] mb-4">Payment Successful</h1>
-    <p class="text-[#666] mb-8">Your BankIntel dataset is ready to download. Thank you for your purchase.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Complete — FDIC B2B Dataset | Thalux AI</title>
+    <meta name="description" content="Your FDIC Premium B2B Sales Dataset purchase is processing. Check your email for the download link." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://thalux.ai/data/fdic-bankintel/success" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0A0A0A] text-gray-200 font-body">
+    <main class="min-h-screen flex items-center justify-center px-6">
+      <div class="max-w-lg w-full text-center">
+        <!-- Success icon -->
+        <div class="w-20 h-20 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto mb-8">
+          <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
 
-    <div class="bg-white border border-[#DED8D0] rounded-xl p-8 mb-8 max-w-md mx-auto text-left">
-      <p class="text-sm text-[#666] mb-4">Your purchase includes:</p>
-      <ul class="space-y-2 text-sm mb-6">
-        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> 4,185 FDIC-insured institution records</li>
-        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> Cleaned & enriched with asset tier classification</li>
-        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> 11 CRM-ready columns</li>
-        <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">&#10003;</span> Single commercial license</li>
-      </ul>
+        <h1 class="text-3xl md:text-4xl font-headline font-bold text-white mb-4">
+          Purchase Complete!
+        </h1>
+        <p class="text-lg text-gray-400 font-body leading-relaxed mb-8">
+          Your <strong class="text-white">FDIC Premium B2B Sales Dataset</strong> order is being processed.
+        </p>
 
-      <a href="/data/fdic-bankintel/BankIntel_Full_Dataset.csv"
-         class="block w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center"
-         download>
-        &#11015; Download Full Dataset (CSV)
-      </a>
-    </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8 text-left">
+          <h2 class="font-headline font-bold text-white mb-3">📬 What happens next?</h2>
+          <ol class="text-sm text-gray-400 space-y-3">
+            <li class="flex gap-3">
+              <span class="text-amber-400 font-bold shrink-0">1.</span>
+              <span>Check your email inbox (the one you used at checkout).</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-amber-400 font-bold shrink-0">2.</span>
+              <span>You'll receive an email from Thalux AI with a download link.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-amber-400 font-bold shrink-0">3.</span>
+              <span>Click the link within 24 hours to download your CSV file.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-amber-400 font-bold shrink-0">4.</span>
+              <span>Import into your CRM and start prospecting! 🚀</span>
+            </li>
+          </ol>
+        </div>
 
-    <p class="text-xs text-[#999]">Need help? <a href="/contact" class="text-[#E5B73C] underline">Contact support</a></p>
-    <p class="text-xs text-[#999] mt-2"><a href="/data/fdic-bankintel" class="text-[#E5B73C] underline">Back to BankIntel</a></p>
-  </section>
-</Layout>
+        <div class="bg-amber-500/5 border border-amber-500/20 rounded-xl p-4 mb-8">
+          <p class="text-sm text-amber-300">
+            ⏱️ <strong>Didn't receive an email?</strong> Check your spam folder or contact
+            <a href="mailto:support@thalux.ai" class="underline">support@thalux.ai</a>
+          </p>
+        </div>
+
+        <a href="/data/fdic-bankintel" class="inline-block text-sm text-gray-500 hover:text-gray-300 transition-colors">
+          ← Back to product page
+        </a>
+      </div>
+    </main>
+
+    <script>
+      // Auto-refresh for subscription purchases
+      // If this page was reached after Stripe redirect, check for session_id
+      const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = urlParams.get('session_id');
+      if (sessionId) {
+        console.log('Stripe session completed:', sessionId);
+        // The webhook will handle fulfillment asynchronously.
+        // This page just confirms the purchase was recorded.
+      }
+    </script>
+  </body>
+</html>
