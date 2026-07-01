@@ -21,6 +21,7 @@ const SITE_URL = (process.env.URL || process.env.DEPLOY_URL || 'http://localhost
 // Products without price IDs return a tracking confirmation (smoke-test mode).
 // v2 — GovCon activated 2026-07-01
 const GOVCON_ACTIVATED = '2026-07-01T15:00'; // force fresh deploy hash
+const DEPLOY_SEED = 'v3';                    // increment to force rebuild
 const PRODUCT_MAP = {
   'fdic_bankintel_one_time': { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCbCIWATvDD', tier: 'one-time' },
   'fdic_bankintel_monthly':  { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCblWGsklMQ', tier: 'monthly' },
@@ -149,7 +150,7 @@ function smokeResponse(intent, startTime, info) {
   console.log('[CHECKOUT][SMOKE]', JSON.stringify(intent));
 
   return jsonResponse(200, {
-    status: 'tracked',
+    status: 'tracked_v3',
     message: `Checkout intent recorded for "${info.slug}" — ${info.tier === 'one-time' ? '$49' : '$99/mo'}`,
     intent: {
       product_slug: info.slug,
