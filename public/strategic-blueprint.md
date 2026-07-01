@@ -3,7 +3,7 @@
 > **DERIVATIVE DOCUMENT — Working summary of THALUX_SYSTEM_MAP.md**  
 > Auto-updated by Nous. Read by Claude.ai at session start.  
 > If this contradicts THALUX_SYSTEM_MAP.md, the system map wins. Full stop.  
-> Last updated: 2026-07-01 09:06
+> Last updated: 2026-07-01 13:06
 > Authority chain: Live reality → THALUX_SYSTEM_MAP.md → this file
 
 ---
