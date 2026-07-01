@@ -28,6 +28,10 @@ const PRODUCT_MAP = {
   'osha_compliance_monthly':     { slug: 'osha-compliance',  price: 'price_1To80RAEAgb5SjCb5kdYyl3v', tier: 'monthly' },
   'commercial_permits_one_time': { slug: 'commercial-permits', price: 'price_1To80RAEAgb5SjCbAK5nsUe9', tier: 'one-time' },
   'commercial_permits_monthly':  { slug: 'commercial-permits', price: 'price_1To80SAEAgb5SjCbd5uhBVjY', tier: 'monthly' },
+  // GovCon Velocity — smoke-test until Stripe products created
+  'govcon_velocity_single':      { slug: 'govcon-intel', tier: 'monthly', price_display: '$199/mo' },
+  'govcon_velocity_multi':       { slug: 'govcon-intel', tier: 'monthly', price_display: '$349/mo' },
+  'govcon_velocity_enterprise':  { slug: 'govcon-intel', tier: 'monthly', price_display: '$499/mo' },
 };
 
 // ─── Handler ───────────────────────────────────────────────────────────────
