@@ -19,6 +19,8 @@ const SITE_URL = (process.env.URL || process.env.DEPLOY_URL || 'http://localhost
 // ─── Product-to-Price Mapping ──────────────────────────────────────────────
 // Products with active Stripe price IDs redirect through live Checkout Sessions.
 // Products without price IDs return a tracking confirmation (smoke-test mode).
+// v2 — GovCon activated 2026-07-01
+const GOVCON_ACTIVATED = '2026-07-01T15:00'; // force fresh deploy hash
 const PRODUCT_MAP = {
   'fdic_bankintel_one_time': { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCbCIWATvDD', tier: 'one-time' },
   'fdic_bankintel_monthly':  { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCblWGsklMQ', tier: 'monthly' },
@@ -28,10 +30,10 @@ const PRODUCT_MAP = {
   'osha_compliance_monthly':     { slug: 'osha-compliance',  price: 'price_1To80RAEAgb5SjCb5kdYyl3v', tier: 'monthly' },
   'commercial_permits_one_time': { slug: 'commercial-permits', price: 'price_1To80RAEAgb5SjCbAK5nsUe9', tier: 'one-time' },
   'commercial_permits_monthly':  { slug: 'commercial-permits', price: 'price_1To80SAEAgb5SjCbd5uhBVjY', tier: 'monthly' },
-  // GovCon Velocity — smoke-test until Stripe products created
-  'govcon_velocity_single':      { slug: 'govcon-intel', tier: 'monthly', price_display: '$199/mo' },
-  'govcon_velocity_multi':       { slug: 'govcon-intel', tier: 'monthly', price_display: '$349/mo' },
-  'govcon_velocity_enterprise':  { slug: 'govcon-intel', tier: 'monthly', price_display: '$499/mo' },
+  // GovCon Velocity — live Stripe prices
+  'govcon_velocity_single':      { slug: 'govcon-intel', price: 'price_1ToNjFAEAgb5SjCb1cCCs80O', tier: 'monthly' },
+  'govcon_velocity_multi':       { slug: 'govcon-intel', price: 'price_1ToNjGAEAgb5SjCbs3vBln01', tier: 'monthly' },
+  'govcon_velocity_enterprise':  { slug: 'govcon-intel', price: 'price_1ToNjGAEAgb5SjCbGxlzTlKE', tier: 'monthly' },
 };
 
 // ─── Handler ───────────────────────────────────────────────────────────────

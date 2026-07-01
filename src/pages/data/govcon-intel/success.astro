@@ -1,0 +1,26 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="GovCon Velocity — Payment Successful">
+  <section class="max-w-3xl mx-auto px-6 pt-24 pb-20 text-center">
+    <div class="w-20 h-20 bg-[rgba(229,183,60,0.15)] rounded-full flex items-center justify-center mx-auto mb-6">
+      <span class="text-4xl">✅</span>
+    </div>
+    <h1 class="font-['Manrope'] text-4xl font-bold text-[#2D2D2D] mb-4">Payment Successful</h1>
+    <p class="text-[#666] text-lg mb-8 max-w-md mx-auto leading-relaxed">
+      Your GovCon Velocity subscription is being activated. You'll receive your first CSV drop-feed next Monday morning.
+    </p>
+    <div class="bg-white border border-[#DED8D0] rounded-xl p-8 max-w-sm mx-auto mb-8">
+      <p class="text-sm text-[#666] mb-2">What happens next:</p>
+      <ul class="text-sm text-[#333] space-y-2 text-left">
+        <li class="flex items-start gap-2"><span class="text-[#10B981] shrink-0">1.</span> Your NAICS codes are being activated in our extraction pipeline</li>
+        <li class="flex items-start gap-2"><span class="text-[#10B981] shrink-0">2.</span> You'll receive a confirmation email with delivery details</li>
+        <li class="flex items-start gap-2"><span class="text-[#10B981] shrink-0">3.</span> First CSV lands in your inbox next Monday AM</li>
+      </ul>
+    </div>
+    <a href="/data/govcon-intel" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors">
+      Back to GovCon Velocity
+    </a>
+  </section>
+</Layout>
