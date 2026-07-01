@@ -3,7 +3,7 @@
 > **DERIVATIVE DOCUMENT — Working summary of THALUX_SYSTEM_MAP.md**  
 > Auto-updated by Nous. Read by Claude.ai at session start.  
 > If this contradicts THALUX_SYSTEM_MAP.md, the system map wins. Full stop.  
-> Last updated: 2026-06-30 19:21
+> Last updated: 2026-07-01 09:06
 > Authority chain: Live reality → THALUX_SYSTEM_MAP.md → this file
 
 ---
@@ -82,7 +82,7 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 | Metric | Value | Source |
 |--------|-------|--------|
 | Current MRR | $0 |
-| Monthly Burn | ~$159/mo |
+| Monthly Burn | ~$1086/mo |
 | Runway | **Sep 2026** | operational_context (survival_deadline) |
 | OpenRouter Limit | $350/mo | OpenRouter API live check |
 | OpenRouter Remaining | **$120.96** | OpenRouter API live check Jun 29 |
