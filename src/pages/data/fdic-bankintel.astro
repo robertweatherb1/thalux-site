@@ -63,7 +63,7 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Immediate digital delivery</li>
           </ul>
-          <button onclick="checkout('price_1TmdjLAEAgb5SjCbCIWATvDD')"
+          <button onclick="checkout('fdic_bankintel_one_time')"
              class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
             Buy Now — $49
           </button>
@@ -79,7 +79,7 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Preferential email support</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Cancel anytime — keep last snapshot</li>
           </ul>
-          <button onclick="checkout('price_1TmdjLAEAgb5SjCblWGsklMQ')"
+          <button onclick="checkout('fdic_bankintel_monthly')"
              class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
             Subscribe — $99/mo
           </button>
@@ -193,13 +193,13 @@ import Layout from '../../layouts/Layout.astro';
       }
     ]
   })} />
-  <script>
+  <script is:inline>
     async function checkout(priceId) {
       try {
         const resp = await fetch('/api/create-checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ price_id: priceId })
+          body: JSON.stringify({ product: priceId })
         });
         if (!resp.ok) throw new Error('Checkout failed');
         const data = await resp.json();

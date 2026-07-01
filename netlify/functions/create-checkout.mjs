@@ -67,25 +67,32 @@ export const handler = async (event) => {
     });
   }
 
-  // ── Log the intent ────────────────────────────────────────────────────
+  // ── Log the intent (concise audit trail; full metrics via webhook) ──
   const intent = {
     event: 'checkout_intent',
     timestamp: new Date().toISOString(),
     product_key: productKey,
     product_slug: productInfo.slug,
     tier: productInfo.tier,
-    price_display: productInfo.tier === 'one-time' ? '$49 one-time' : '$99/mo',
     mode: productInfo.price ? 'live' : 'smoke-test',
-    user_agent: event.headers['user-agent'] || 'unknown',
     referer: event.headers['referer'] || 'direct',
-    elapsed_ms: 0,
   };
 
   console.log('[CHECKOUT]', JSON.stringify(intent));
 
   // ── Route ─────────────────────────────────────────────────────────────
-  // Scenario A: Live Stripe Checkout Session
+  // Scenario A: Live Stripe Checkout Session — minimal click-init logging
+  // Full payment metrics (completed/failed) arrive via stripe-webhook.js
   if (productInfo.price && STRIPE_KEY) {
+    // Log lightweight click-init audit trail only
+    console.log('[CHECKOUT][CLICK]', JSON.stringify({
+      event: 'checkout_click',
+      timestamp: intent.timestamp,
+      product_key: productKey,
+      product_slug: productInfo.slug,
+      tier: productInfo.tier,
+      referer: intent.referer,
+    }));
     try {
       const stripeResp = await fetch('https://api.stripe.com/v1/checkout/sessions', {
         method: 'POST',
@@ -142,7 +149,7 @@ function smokeResponse(intent, startTime, info) {
       product_slug: info.slug,
       tier: info.tier,
       timestamp: intent.timestamp,
-      price_display: intent.price_display,
+      price_display: info.tier === 'one-time' ? '$49 one-time' : '$99/mo',
       mode: 'smoke-test',
     },
   });

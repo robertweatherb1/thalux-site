@@ -242,7 +242,7 @@ import Layout from '../../layouts/Layout.astro';
   })} />
 
   <!-- Checkout Script -->
-  <script>
+  <script is:inline>
     async function checkout(productKey) {
       try {
         const resp = await fetch('/api/create-checkout', {
