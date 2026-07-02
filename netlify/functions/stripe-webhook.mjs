@@ -26,6 +26,10 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 const SITE_URL = process.env.URL || process.env.DEPLOY_URL || 'http://localhost:8888';
 // n8n webhook URL for fulfillment email sending
 const N8N_FULFILLMENT_WEBHOOK = process.env.N8N_FULFILLMENT_WEBHOOK || 'http://localhost:5678/webhook/bankintel-fulfillment';
+// Mission Control base URL (for pipeline advancement)
+const MC_BASE_URL = process.env.MC_BASE_URL || 'http://localhost:8001';
+// Shared secret for auth between webhook and MC pipeline/advance endpoint
+const PIPELINE_WEBHOOK_SECRET = process.env.PIPELINE_WEBHOOK_SECRET || '';
 
 // ─── Stripe Signature Verification ────────────────────────────────────────────
 
@@ -105,6 +109,50 @@ function buildDownloadEmail(product, tier, downloadUrl, customerEmail) {
       </html>
     `,
   };
+}
+
+// ─── Pipeline Advance ────────────────────────────────────────────────────────
+
+/**
+ * Call Mission Control's pipeline/advance endpoint when a checkout
+ * session has a pipeline_id in its metadata.
+ */
+async function advancePipeline(session) {
+  const pipelineId = session.metadata?.pipeline_id;
+  if (!pipelineId) return null; // Not a pipeline-triggered checkout
+
+  // Determine the target stage based on current payment event
+  // signed → onboarding for first payment; further advances handled by pipeline_watcher
+  const newStage = session.mode === 'subscription' ? 'onboarding' : 'active';
+
+  try {
+    const payload = {
+      pipeline_id: parseInt(pipelineId, 10),
+      new_stage: newStage,
+      metadata: {
+        stripe_session_id: session.id,
+        payment_intent: session.payment_intent,
+        amount_total: session.amount_total,
+        currency: session.currency,
+      },
+    };
+    if (PIPELINE_WEBHOOK_SECRET) {
+      payload.secret = PIPELINE_WEBHOOK_SECRET;
+    }
+
+    const resp = await fetch(`${MC_BASE_URL}/api/pipeline/advance`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = await resp.json();
+    console.log(`[PIPELINE][ADVANCE] pipeline_id=${pipelineId} → ${newStage}: ${result.success ? 'ok' : 'failed'}`,
+      result.success ? '' : ` error=${result.error}`);
+    return result;
+  } catch (err) {
+    console.error(`[PIPELINE][ADVANCE] network error for pipeline_id=${pipelineId}: ${err.message}`);
+    return { success: false, error: err.message };
+  }
 }
 
 // ─── n8n Fulfillment ──────────────────────────────────────────────────────────
@@ -244,6 +292,12 @@ export const handler = async (event) => {
         `Fulfillment for ${product.slug} (${tier}): customer=${customerEmail}, ` +
         `token=..., download_url=${downloadUrl.slice(0, 60)}..., fulfilled=${fulfilled}`
       );
+
+      // Advance pipeline if this checkout has a pipeline_id in metadata
+      const pipelineResult = await advancePipeline(session);
+      if (pipelineResult) {
+        console.log(`[PIPELINE] pipeline_id=${session.metadata.pipeline_id} advance result: ${pipelineResult.success}`);
+      }
 
       return {
         statusCode: 200,

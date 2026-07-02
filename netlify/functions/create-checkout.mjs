@@ -49,11 +49,13 @@ export const handler = async (event) => {
 
   // ── Parse product key from request ────────────────────────────────────
   let productKey = '';
+  let pipelineId = '';
 
   if (event.httpMethod === 'POST') {
     try {
       const body = JSON.parse(event.body || '{}');
       productKey = (body.product || '').trim();
+      pipelineId = body.pipeline_id ? String(body.pipeline_id).trim() : '';
     } catch {
       return jsonResponse(400, { error: 'Invalid JSON body' });
     }
@@ -62,6 +64,7 @@ export const handler = async (event) => {
     const product = (params.product || '').trim().toLowerCase();
     const tier = (params.tier || '').trim().toLowerCase();
     productKey = `${product.replace(/-/g, '_')}_${tier}`;
+    pipelineId = (params.pipeline_id || '').trim();
   } else {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
@@ -83,6 +86,7 @@ export const handler = async (event) => {
     tier: productInfo.tier,
     mode: productInfo.price ? 'live' : 'smoke-test',
     referer: event.headers['referer'] || 'direct',
+    ...(pipelineId ? { pipeline_id: pipelineId } : {}),
   };
 
   console.log('[CHECKOUT]', JSON.stringify(intent));
@@ -115,6 +119,7 @@ export const handler = async (event) => {
           'cancel_url': `${SITE_URL}/data/${productInfo.slug}`,
           'metadata[product]': productInfo.slug,
           'metadata[tier]': productInfo.tier,
+          ...(pipelineId ? { 'metadata[pipeline_id]': pipelineId } : {}),
         }).toString(),
       });
 
