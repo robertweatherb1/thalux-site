@@ -3,7 +3,7 @@
 > **DERIVATIVE DOCUMENT — Working summary of THALUX_SYSTEM_MAP.md**  
 > Auto-updated by Nous. Read by Claude.ai at session start.  
 > If this contradicts THALUX_SYSTEM_MAP.md, the system map wins. Full stop.  
-> Last updated: 2026-07-02 05:08
+> Last updated: 2026-07-02 09:09
 > Authority chain: Live reality → THALUX_SYSTEM_MAP.md → this file
 
 ---
@@ -64,8 +64,7 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 ### Pipeline
 | Prospect | Product | Monthly | Status |
 |----------|---------|---------|--------|
-| Apex Trade | SLA $1,200/mo | $1,200 | **Not signed.** Template exists, zero signatures. No LLC/EIN. |
-| Cashew Cartel | TBD | TBD | Parked. No client DB record. |
+|| Cashew Cartel | TBD | TBD | Parked. No client DB record. |
 | Thompson Auto Repair | Bronze $195/mo | $195 | Retell lead. No client DB record. |
 | Mitchell Dental | Gold Tier | $249/mo | Retell lead (Jun 19) — not scoped |
 | Miller & Co Plumbing | Full Stack | $1,800–2,500/mo | Retell lead (Jun 22) — plumbing, Lancaster |
@@ -140,7 +139,6 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 | ACS Doctrine — reclassify per Claude's call | ✅ Done |
 | **BankIntel redirect fix** | 🔴 OPEN |
 | **Financial reconciliation** | 🔴 OPEN (this directive resolves it) |
-| **Apex Trade — chase to signature or drop** | 🔴 OPEN |
 
 ### Open Blockers
 **PRIORITY: HIGHEST**
@@ -151,7 +149,7 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 3. CV Automotive GBP audit — blocked (no TJ dashboard access).
 4. **cvautomotive.com** (non-hyphenated) — redirect or retire.
 5. **CV Automotive INV-001** — due Jul 1, unpaid as of Jun 29.
-6. **Apex Trade — NOT SIGNED.** Needs Robert's explicit call.
+6. **~~Apex Trade — test run, not real~~**
 7. **6 dormant crons** — fix and confirm, or delete.
 8. Daily Briefing — 403 error (paused Jun 26).
 9. Cold Outreach — 2 failures (paused Jun 26).
