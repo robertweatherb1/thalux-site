@@ -3,7 +3,7 @@
 > **DERIVATIVE DOCUMENT — Working summary of THALUX_SYSTEM_MAP.md**  
 > Auto-updated by Nous. Read by Claude.ai at session start.  
 > If this contradicts THALUX_SYSTEM_MAP.md, the system map wins. Full stop.  
-> Last updated: 2026-07-02 13:09
+> Last updated: 2026-07-02 17:10
 > Authority chain: Live reality → THALUX_SYSTEM_MAP.md → this file
 
 ---
@@ -149,7 +149,7 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 3. CV Automotive GBP audit — blocked (no TJ dashboard access).
 4. **cvautomotive.com** (non-hyphenated) — redirect or retire.
 5. **CV Automotive INV-001** — due Jul 1, unpaid as of Jun 29.
-6. **~~Apex Trade — test run, not real~~**
+
 7. **6 dormant crons** — fix and confirm, or delete.
 8. Daily Briefing — 403 error (paused Jun 26).
 9. Cold Outreach — 2 failures (paused Jun 26).
