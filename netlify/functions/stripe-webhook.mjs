@@ -43,8 +43,8 @@ async function verifyStripeSignature(body, signature) {
     return JSON.parse(body);
   }
 
-  const stripePkg = await import('stripe');
-  const stripeClient = stripePkg.default(process.env.STRIPE_SECRET_KEY, {
+  const { default: Stripe } = await import('stripe');
+  const stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: '2025-02-24.acacia',
   });
 
