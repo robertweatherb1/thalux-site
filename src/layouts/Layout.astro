@@ -10,9 +10,9 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Thalux AI — AI voice agents, websites, and GBP optimization for trade shops in Lancaster County. We build systems that answer, get found, and follow up." />
+    <meta name="description" content="Thalux AI — government data intelligence, business directories, and contract award analytics. Clean datasets for FinTech, GovCon, and healthcare sales teams." />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content="Every missed call is a job that went to someone else. Thalux AI builds systems that answer when you can't." />
+    <meta property="og:description" content="Raw government data, enriched and delivered. Skip the engineering — get the data that drives your pipeline." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={siteUrl + Astro.url.pathname} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,19 +24,17 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
     <title>{pageTitle}</title>
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "Organization",
       "name": "Thalux AI",
-      "description": "AI voice agents, websites, and local SEO for trade shops in Lancaster County.",
+      "description": "Government data intelligence and contract award analytics. Clean datasets for sales teams.",
       "url": "https://thalux.ai",
-      "telephone": "+171****0566",
-      "areaServed": "Lancaster County, PA",
-      "priceRange": "$195-$999"
+      "priceRange": "$49-$499"
     })} />
   </head>
   <body class="bg-[#F5F4F0] text-[#2D2D2D] font-['Inter'] antialiased">
     <!-- Announcement Bar -->
     <div class="bg-[#E5B73C] text-white text-center text-sm font-medium py-3 px-6 tracking-wide">
-      ✦ Built for the trades, powered by intelligence ✦
+      ✦ Government data, engineered for commerce ✦
     </div>
 
     <!-- Navigation -->
@@ -46,20 +44,15 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
           Thalux<span class="text-[#E5B73C]"> AI</span>
         </a>
         <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="/" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Home</a>
-          <a href="/services" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Services</a>
-          <a href="/data/fdic-bankintel" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">BankIntel</a>
-          <a href="/data/foreclosure-intel" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Foreclosures</a>
-          <a href="/data/osha-compliance" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">OSHA</a>
-          <a href="/data/commercial-permits" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Permits</a>
-<a href="/data/govcon-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors font-semibold">GovCon</a>
-          <a href="/about" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">About</a>
-          <a href="/portal" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Client Portal</a>
-          <a href="/contact" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Contact</a>
-        </div>
-        <a href="/contact" class="bg-[#E5B73C] text-white px-5 py-2 rounded-md font-['Manrope'] font-bold text-sm hover:bg-[#CDA333] transition-colors">
-          Talk to Us
-        </a>
+                  <a href="/" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Home</a>
+                  <a href="/data/govcon-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors font-semibold">GovCon</a>
+                  <a href="/about" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">About</a>
+                  <a href="/portal" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Client Portal</a>
+                  <a href="/contact" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Contact</a>
+                </div>
+                <a href="/data/govcon-intel" class="bg-[#E5B73C] text-white px-5 py-2 rounded-md font-['Manrope'] font-bold text-sm hover:bg-[#CDA333] transition-colors">
+                  Browse Data
+                </a>
       </div>
     </nav>
 
@@ -77,15 +70,13 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
               Thalux<span class="text-[#E5B73C]"> AI</span>
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
-              AI voice agents, websites, and local SEO for trade shops that are too busy working to chase leads.
+              Government data, engineered for commerce. Clean datasets delivered weekly.
             </p>
           </div>
           <div>
-            <h4 class="font-['Manrope'] font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Services</h4>
+            <h4 class="font-['Manrope'] font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Data Products</h4>
             <ul class="space-y-2 text-sm text-gray-300">
-              <li><a href="/services/voice-agents" class="hover:text-[#E5B73C] transition-colors">AI Voice Receptionist</a></li>
-              <li><a href="/services/websites" class="hover:text-[#E5B73C] transition-colors">Website Builds</a></li>
-              <li><a href="/services/gbp" class="hover:text-[#E5B73C] transition-colors">GBP Optimization</a></li>
+              <li><a href="/data/govcon-intel" class="hover:text-[#E5B73C] transition-colors">GovCon Velocity</a></li>
             </ul>
           </div>
           <div>

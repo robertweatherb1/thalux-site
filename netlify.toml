@@ -6,6 +6,31 @@
   publish = "dist/"
 
 [[redirects]]
+  from = "/services/*"
+  to = "/data/govcon-intel"
+  status = 301
+
+[[redirects]]
+  from = "/data/fdic-bankintel"
+  to = "/data/govcon-intel"
+  status = 301
+
+[[redirects]]
+  from = "/data/foreclosure-intel"
+  to = "/data/govcon-intel"
+  status = 301
+
+[[redirects]]
+  from = "/data/osha-compliance"
+  to = "/data/govcon-intel"
+  status = 301
+
+[[redirects]]
+  from = "/data/commercial-permits"
+  to = "/data/govcon-intel"
+  status = 301
+
+[[redirects]]
   from = "/api/portal"
   to = "/.netlify/functions/portal"
   status = 200
