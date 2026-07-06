@@ -385,6 +385,53 @@ export const handler = async (event) => {
       };
     }
 
+    // ── handle invoice.payment_failed (renewal failures) ──────────────────────
+    if (eventType === 'invoice.payment_failed') {
+      const invoice = data;
+      const customerEmail = invoice.customer_email || invoice.customer_name || 'unknown';
+      const amountDue = invoice.amount_due || 0;
+      const attemptCount = invoice.attempt_count || 1;
+      const nextAttempt = invoice.next_payment_attempt
+        ? new Date(invoice.next_payment_attempt * 1000).toISOString()
+        : 'none';
+
+      console.log(
+        `[PAYMENT FAILED] invoice=${invoice.id}, customer=${customerEmail}, ` +
+        `amount_due=${amountDue/100}, attempt=${attemptCount}, next_attempt=${nextAttempt}`
+      );
+
+      // Log to Mission Control for pipeline awareness
+      try {
+        const mcUrl = process.env.MC_BASE_URL || 'http://localhost:8001';
+        const secret = process.env.PIPELINE_WEBHOOK_SECRET || '';
+        const payload = {
+          event: 'invoice.payment_failed',
+          invoice_id: invoice.id,
+          subscription_id: invoice.subscription,
+          customer_id: invoice.customer,
+          customer_email: customerEmail,
+          amount_due: amountDue,
+          attempt_count: attemptCount,
+          next_payment_attempt: invoice.next_payment_attempt,
+          billing_reason: invoice.billing_reason,
+        };
+        await fetch(`${mcUrl}/api/pipeline/advance`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Webhook-Secret': secret },
+          body: JSON.stringify(payload),
+        });
+        console.log(`[PAYMENT FAILED] notified Mission Control`);
+      } catch (mcErr) {
+        console.error(`[PAYMENT FAILED] Failed to notify MC: ${mcErr.message}`);
+      }
+
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ received: true, event: 'payment_failed', amount_due: amountDue }),
+      };
+    }
+
     // ── Unhandled event type ─────────────────────────────────────────────────
     console.log(`Unhandled event type: ${eventType}`);
     return {
