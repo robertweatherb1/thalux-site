@@ -13,15 +13,12 @@
  *   3. For smoke-test products (no price_ids yet): returns tracking confirmation JSON
  */
 
-const STRIPE_KEY = process.env.STRIPE_SECRET_KEY;
 const SITE_URL = (process.env.URL || process.env.DEPLOY_URL || 'http://localhost:8888').replace(/\/$/, '');
 
 // ─── Product-to-Price Mapping ──────────────────────────────────────────────
 // Products with active Stripe price IDs redirect through live Checkout Sessions.
 // Products without price IDs return a tracking confirmation (smoke-test mode).
-// v2 — GovCon activated 2026-07-01
-const GOVCON_ACTIVATED = '2026-07-01T15:00'; // force fresh deploy hash
-const DEPLOY_SEED = 'v3';                    // increment to force rebuild
+// v3 — STRIPE_KEY read at invocation time
 const PRODUCT_MAP = {
   'fdic_bankintel_one_time': { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCbCIWATvDD', tier: 'one-time' },
   'fdic_bankintel_monthly':  { slug: 'fdic-bankintel', price: 'price_1TmdjLAEAgb5SjCblWGsklMQ', tier: 'monthly' },
@@ -41,6 +38,11 @@ const PRODUCT_MAP = {
 
 export const handler = async (event) => {
   const startTime = Date.now();
+  // Read env at invocation time, not module load time
+  const STRIPE_KEY = process.env.STRIPE_SECRET_KEY || '';
+  if (!STRIPE_KEY.startsWith('sk_live')) {
+    console.error('[CHECKOUT][ENV_WARN] STRIPE_SECRET_KEY missing or invalid format');
+  }
 
   // CORS preflight
   if (event.httpMethod === 'OPTIONS') {
@@ -155,7 +157,7 @@ function smokeResponse(intent, startTime, info) {
   console.log('[CHECKOUT][SMOKE]', JSON.stringify(intent));
 
   return jsonResponse(200, {
-    status: 'tracked_v3',
+    status: 'tracked',
     message: `Checkout intent recorded for "${info.slug}" — ${info.tier === 'one-time' ? '$49' : '$99/mo'}`,
     intent: {
       product_slug: info.slug,
