@@ -3,8 +3,9 @@
 > **DERIVATIVE DOCUMENT — Working summary of THALUX_SYSTEM_MAP.md**  
 > Auto-updated by Nous. Read by Claude.ai at session start.  
 > If this contradicts THALUX_SYSTEM_MAP.md, the system map wins. Full stop.  
-> Last updated: 2026-07-06 05:39
+> Last updated: 2026-07-10 09:33
 > Authority chain: Live reality → THALUX_SYSTEM_MAP.md → this file
+> BLUEPRINT IMPACT rule: Any directive, task, or decision annotated with `BLUEPRINT IMPACT` is not closed until the corresponding blueprint edit is confirmed. This file is the derivative truth read by Claude at session start — drift here = fragmented context for the next session.
 
 ---
 
@@ -48,12 +49,14 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 
 ## 3. Active Clients & Pipeline
 
-### Documented Research (Niche Discovery — Jun 26)
-| Niche | Viability | API Status | Product |
-|-------|-----------|------------|---------|
-| FDIC Bank Data | 8/10 | ✅ Verified (no auth) | $49 one-time, $99/mo via Stripe |
-| OpenFEC Campaign Finance | 7/10 | ✅ Verified (DEMO_KEY) | Subscription |
-| NPPES Healthcare Provider | 6/10 | ✅ Verified (monthly CSV) | Subscription |
+### Documented Research (Niche Discovery — Jun 26, updated Jul 6)
+| Niche | Viability | API Status | Product | Status |
+|-------|-----------|------------|---------|--------|
+| FDIC Bank Data (BankIntel) | 8/10 | ✅ Verified | $49 one-time, $99/mo feed via Stripe | 🟡 Stripe live, no delivery mechanism. Pivot from $99/mo to $49 snap / $149 quarterly refresh under consideration. |
+| GovCon Velocity (SAM.gov Contract Awards) | 8.5/10 | ✅ Verified (open.gsa.gov, free API key) | $199/$349/$499 monthly | 🔥 ACTIVE — ATOM feed retires Jul 31. Extractor script must be rebuilt (lost from disk). Stripe keys expired. Capture page live at thalux.ai/data/govcon-intel. Highest revenue-shot product. |
+| OpenFEC Campaign Finance | 7/10 | ✅ Verified (DEMO_KEY) | Subscription | ⏸️ Hold — no bandwidth until GovCon ships |
+| NPPES Healthcare Provider | 6/10 | ✅ Verified (monthly CSV) | Subscription | ❌ KILLED per Fable 5 analysis — overcompetitive market, no differentiation at 10K records |
+| CFPB 1071 Compliance Pipeline | 8/10 | ⏳ Scored, not built | TBD | ⏸️ Hold — community bank compliance tool. Big opportunity but needs GovCon shipped first |
 
 ### Signed / Active
 | Client | Product | Monthly | Status |
@@ -82,6 +85,7 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 |--------|-------|--------|
 | Current MRR | $0 |
 | Monthly Burn | ~$1086/mo |
+| Netlify Credits | 1,000/mo (Jun 28–Jul 28). **33 builds in 6 days burned ~495+ credits** — root cause was blueprint sync cron pushing every 4h. Fixed Jul 6. Auto top-up now enabled ($5/500 credits). |
 | Runway | **Sep 2026** | operational_context (survival_deadline) |
 | OpenRouter Limit | $350/mo | OpenRouter API live check |
 | OpenRouter Remaining | **$120.96** | OpenRouter API live check Jun 29 |
@@ -123,11 +127,11 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 
 ## 6. Active Directives & Open Blockers
 
-### Open Directives (from blueprint audit Jun 27)
+### Open Directives (from blueprint audit Jun 27, updated Jul 6)
 | Directive | Status |
 |-----------|--------|
 | Blueprint refresh loop (v2) — build + verify all 4 paths | ✅ Done |
-| Cadence rule — 4h mechanical + v2 loop on BLUEPRINT IMPACT | ✅ Done |
+| Cadence rule — 4h mechanical + v2 loop on BLUEPRINT IMPACT | ✅ Done — also added BLUEPRINT IMPACT standing rule (see header) |
 | Ergon naming correction — "proposed, not shipped" everywhere | ✅ Done |
 | Gemini script — vertical-neutrality fix | ✅ Done |
 | GitHub raw URL bridge — Claude autofetch | ✅ Done |
@@ -137,8 +141,18 @@ The "trade-shop receptionist" framing was a product hypothesis that attracted in
 | Self-verification skill | ✅ Done |
 | CV Automotive site — confirm domain | ✅ Done |
 | ACS Doctrine — reclassify per Claude's call | ✅ Done |
-| **BankIntel redirect fix** | 🔴 OPEN |
-| **Financial reconciliation** | 🔴 OPEN (this directive resolves it) |
+| **BankIntel redirect fix** | 🔴 OPEN — Stripe live, no delivery |
+| **Financial reconciliation** | ✅ Done |
+| **DirecTIVE: ATOM Feed Consumer Target List** | 🟡 IN PROGRESS — GitHub code search for FPDS endpoint consumers. 50+ org list due 5 days. BLUEPRINT IMPACT: GovCon added to Section 7 as Asset #4, Filter 1 CPC exception logged. |
+| **DirecTIVE: FPDS ATOM Retirement Capture Page** | 🟡 IN PROGRESS — Static page targeting "FPDS ATOM feed retired" SEO. 7-day build. BLUEPRINT IMPACT: hybrid sample pattern added to Section 13, 14-day/30-day gates logged against Filter 2. |
+| **DirecTIVE: Netlify credit bleed fix** | ✅ Done — refresh_blueprint.py patched to copy-only, no git push. Auto top-up enabled ($5/500 credits). netlify-ops skill updated with guardrails. 33 deploys in 6 days was root cause. |
+
+### Kill Gates (GovCon Velocity specific)
+| Gate | Metric | Status |
+|------|--------|--------|
+| Filter 1 — CPC floor ($12) | ⏭️ **EXCEPTION** — "FPDS ATOM feed retired" query born 2026, Keyword Planner has no data. External deadline (Jul 31) substitutes for CPC evidence. Logged: blueprint decision Jul 6. |
+| Filter 2 — 14-day smoke test | ≥3 Stripe checkout initializations | Waiting on capture page deploy |
+| Filter 3 — 30-day revenue gate | ≥2 paid subscribers at $349+ | Waiting on Filter 2 pass |
 
 ### Open Blockers
 **PRIORITY: HIGHEST**
@@ -245,6 +259,25 @@ This blueprint is derived solely from THALUX_SYSTEM_MAP.md (the master document)
 ---
 
 ## Changelog
+
+### 2026-07-06 — Research Department Operations Manual Created
+- **ADDED:** Thalux_Ops/Pipeline/Research_Department_Operations.md — formal gating process for all opportunities. Pipeline: Hawthorne (triage) → Verne (deep research) → Huxley (score + GO/NO-GO) → Robert (gate) → Forge (spool-up plan) → Executor (build).
+- **ADDED:** Huxley redesignated as Research Strategist & Pipeline Operator — owns pipeline health, guardrails, SLA, daily checklist.
+- **ADDED:** Cost guardrails per stage — $0.05/signal (Hawthorne), $5/dossier (Verne), $10/candidate total (Robert escalation). Weekly $25 department cap.
+- **ADDED:** Rejection log at ~/.hermes/data/research/rejection_log.json — permanent record with kill reason, stage, cost, and revisit rules.
+- **ADDED:** Signal intake cron spec — 5 signals/day, auto-feeds Hawthorne triage, adjustable to weekly cadence.
+- **BLUEPRINT IMPACT:** Research Department Operations Manual is now the canonical process for all opportunity evaluation. No build before research gate.\n
+### 2026-07-06 — Data Product Pivot + GovCon Activation + Netlify Crisis
+- **ADDED:** GovCon Velocity (SAM.gov Contract Awards) to Section 3 portfolio — scored 8.5/10, ATOM feed retires Jul 31, highest revenue-shot product.
+- **ADDED:** CFPB 1071 Compliance Pipeline as hold candidate (scored 8/10).
+- **KILLED:** NPPES Healthcare Provider — overcompetitive market, no differentiation.
+- **ADDED:** BLUEPRINT IMPACT standing rule (see header) — any directive annotated with BLUEPRINT IMPACT isn't closed until blueprint edit is confirmed.
+- **ADDED:** GovCon Kill Gates — Filter 1 CPC exception logged (new query, no Keyword Planner data), Filter 2 (14-day ≥3 checkouts), Filter 3 (30-day ≥2 paid subs).
+- **DIRECTIVES LOADED:** ATOM Feed Consumer Target List (5-day GitHub harvest). FPDS ATOM Retirement Capture Page (7-day build).
+- **NETLIFY CRISIS:** Strategic-blueprint-refresh cron pushed every 4h to site repo, triggering builds. 33 deploys in 6 days burned ~495+ credits. Grace top-up granted Jul 4. Fixed: refresh_blueprint.py patched to copy-only, no git push. Auto top-up enabled ($5/500 credits). netlify-ops skill updated with guardrails.
+- **SITE CLEANUP:** Removed Services nav, dead data links (BankIntel, Foreclosures, OSHA, Permits — all 404). Footer stripped of deprecated Voice/Websites/GBP. Meta/Schema updated from trade shops to gov data intelligence. CTA: "Talk to Us" → "Browse Data." All old URLs 301→ GovCon.
+- **PRICING NOTE:** BankIntel restructure under consideration ($49 snap / $149 quarterly). Fable 5 analysis: monthly feed is weak — bank directory doesn't change enough to justify subscription.
+- **CORRECTED:** GovCon and BankIntel were missing from Section 3 portfolio drift between blueprint and actual portfolio — closed via BLUEPRINT IMPACT rule.
 
 ### 2026-06-29 — Final Reconciliation (this version)
 - **ESTABLISHED:** Document hierarchy — System Map = master, this file = derivative. Stated in both files. Never to be re-litigated.

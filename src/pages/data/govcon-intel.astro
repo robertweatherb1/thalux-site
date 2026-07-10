@@ -2,14 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="GovCon Velocity — Federal Contract Award Data">
+<Layout title="GovCon Velocity — Federal Contract Award Intelligence">
   <!-- Hero -->
   <section class="max-w-6xl mx-auto px-6 pt-20 pb-12">
     <div class="md:grid md:grid-cols-2 md:gap-16 items-start">
       <div>
         <div class="flex flex-wrap gap-2 mb-5">
           <span class="inline-block bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
-            ⚡ Data Product
+            ⚡ Coming Soon
           </span>
           <span class="inline-block bg-[rgba(220,38,38,0.12)] text-[#DC2626] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
             ATOM Retirement Jul 31, 2026
@@ -25,13 +25,18 @@ import Layout from '../../layouts/Layout.astro';
         <p class="text-sm text-[#666] leading-relaxed">
           FPDS.gov was decommissioned February 24, 2026. The legacy ATOM feed retires July 31, 2026. Contractors who relied on automated feeds now face a fractured data landscape — every NAICS code, every award, delivered to your inbox Monday morning.
         </p>
+        <div class="mt-6">
+          <a href="#waitlist" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors">
+            Get Notified at Launch →
+          </a>
+        </div>
       </div>
       <div class="mt-8 md:mt-0">
         <!-- Metrics -->
         <div class="grid grid-cols-2 gap-3 mb-6">
           <div class="bg-white border border-[#DED8D0] rounded-xl p-5 text-center">
-            <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">1M+</div>
-            <div class="text-xs text-[#666] mt-1">Awards Indexed</div>
+            <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">70K+</div>
+            <div class="text-xs text-[#666] mt-1">Monthly Award Actions</div>
           </div>
           <div class="bg-white border border-[#DED8D0] rounded-xl p-5 text-center">
             <div class="font-['Manrope'] font-extrabold text-3xl text-[#E5B73C]">19</div>
@@ -124,7 +129,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="bg-white py-16 border-t border-b border-[#DED8D0]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-2">Sample Records</h2>
-      <p class="text-[#666] mb-8">5 sample records shown below. Full dataset covers 900+ NAICS codes with 1M+ indexed awards.</p>
+      <p class="text-[#666] mb-8">5 sample records shown below. Full dataset covers 900+ NAICS codes with 70K+ monthly award actions.</p>
       <div class="overflow-x-auto rounded-xl border border-[#DED8D0] bg-white">
         <table class="w-full text-sm">
           <thead>
@@ -139,28 +144,28 @@ import Layout from '../../layouts/Layout.astro';
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">W912P5-26-C-0012</td><td class="py-3 px-3 text-sm text-[#333]">541511</td><td class="py-3 px-3 text-sm text-[#333]">USACE</td><td class="py-3 px-3 text-sm text-[#333]">Booz Allen Hamilton</td><td class="py-3 px-3 text-sm text-[#333]">$2.45M</td><td class="py-3 px-3 text-sm text-[#333]">2026-06-15</td><td class="py-3 px-3 text-sm text-[#E5B73C]">VA</td></tr>
-            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">FA8750-26-C-0047</td><td class="py-3 px-3 text-sm text-[#333]">541712</td><td class="py-3 px-3 text-sm text-[#333]">USAF</td><td class="py-3 px-3 text-sm text-[#333]">SAIC</td><td class="py-3 px-3 text-sm text-[#333]">$8.10M</td><td class="py-3 px-3 text-sm text-[#333]">2026-06-12</td><td class="py-3 px-3 text-sm text-[#E5B73C]">FL</td></tr>
-            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">GS00Q-26-OSD-001</td><td class="py-3 px-3 text-sm text-[#333]">541519</td><td class="py-3 px-3 text-sm text-[#333]">GSA</td><td class="py-3 px-3 text-sm text-[#333]">Deloitte Consulting</td><td class="py-3 px-3 text-sm text-[#333]">$22.50M</td><td class="py-3 px-3 text-sm text-[#333]">2026-06-01</td><td class="py-3 px-3 text-sm text-[#E5B73C]">DC</td></tr>
-            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">N00189-26-C-0312</td><td class="py-3 px-3 text-sm text-[#333]">336611</td><td class="py-3 px-3 text-sm text-[#333]">NAVSEA</td><td class="py-3 px-3 text-sm text-[#333]">HII Inc.</td><td class="py-3 px-3 text-sm text-[#333]">$47.20M</td><td class="py-3 px-3 text-sm text-[#333]">2026-05-28</td><td class="py-3 px-3 text-sm text-[#E5B73C]">VA</td></tr>
-            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">75FCMC-26-C-0023</td><td class="py-3 px-3 text-sm text-[#333]">621111</td><td class="py-3 px-3 text-sm text-[#333]">HHS</td><td class="py-3 px-3 text-sm text-[#333]">Leidos Health</td><td class="py-3 px-3 text-sm text-[#333]">$1.85M</td><td class="py-3 px-3 text-sm text-[#333]">2026-05-15</td><td class="py-3 px-3 text-sm text-[#E5B73C]">MD</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">W912P5-26-C-0012</td><td class="py-3 px-3 text-sm text-[#333]">541511</td><td class="py-3 px-3 text-sm text-[#333]">USACE</td><td class="py-3 px-3 text-sm text-[#333]">Booz Allen Hamilton</td><td class="py-3 px-3 text-sm text-[#333]">$2.45M</td><td class="py-3 px-3 text-sm text-[#333]">2026-06-15</td><td class="py-3 px-3 text-sm text-[#27272]">VA</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">FA8750-26-C-0047</td><td class="py-3 px-3 text-sm text-[#333]">541712</td><td class="py-3 px-3 text-sm text-[#333]">USAF</td><td class="py-3 px-3 text-sm text-[#333]">SAIC</td><td class="py-3 px-3 text-sm text-[#333]">$8.10M</td><td class="py-3 px-3 text-sm text-[#333]">2026-06-12</td><td class="py-3 px-3 text-sm text-[#27272]">FL</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">GS00Q-26-OSD-001</td><td class="py-3 px-3 text-sm text-[#333]">541519</td><td class="py-3 px-3 text-sm text-[#333]">GSA</td><td class="py-3 px-3 text-sm text-[#333]">Deloitte Consulting</td><td class="py-3 px-3 text-sm text-[#333]">$22.50M</td><td class="py-3 px-3 text-sm text-[#333]">2026-06-01</td><td class="py-3 px-3 text-sm text-[#27272]">DC</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">N00189-26-C-0312</td><td class="py-3 px-3 text-sm text-[#333]">336611</td><td class="py-3 px-3 text-sm text-[#333]">NAVSEA</td><td class="py-3 px-3 text-sm text-[#333]">HII Inc.</td><td class="py-3 px-3 text-sm text-[#333]">$47.20M</td><td class="py-3 px-3 text-sm text-[#333]">2026-05-28</td><td class="py-3 px-3 text-sm text-[#27272]">VA</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-3 font-['Manrope'] font-semibold text-sm text-[#E5B73C]">75FCMC-26-C-0023</td><td class="py-3 px-3 text-sm text-[#333]">621111</td><td class="py-3 px-3 text-sm text-[#333]">HHS</td><td class="py-3 px-3 text-sm text-[#333]">Leidos Health</td><td class="py-3 px-3 text-sm text-[#333]">$1.85M</td><td class="py-3 px-3 text-sm text-[#333]">2026-05-15</td><td class="py-3 px-3 text-sm text-[#27272]">MD</td></tr>
             <!-- Blur overlay rows -->
-            <tr class="relative"><td colspan="7" class="relative overflow-hidden"><div class="absolute inset-0 z-10" style="backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div><div class="opacity-15 py-3 px-3 flex items-center gap-4 text-sm"><span class="font-['Manrope'] font-semibold text-[#E5B73C]">N00189-26-C-0500</span><span class="text-[#333]">334118</span><span class="text-[#333]">DON</span><span class="text-[#333]">Raytheon</span><span class="text-[#333]">$94.1M</span><span class="text-[#333]">2026-07-10</span><span class="text-[#E5B73C]">CA</span></div></td></tr>
-            <tr class="relative"><td colspan="7" class="relative overflow-hidden"><div class="absolute inset-0 z-10" style="backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div><div class="opacity-15 py-3 px-3 flex items-center gap-4 text-sm"><span class="font-['Manrope'] font-semibold text-[#E5B73C]">W52P1J-26-C-0501</span><span class="text-[#333]">332312</span><span class="text-[#333]">DLA</span><span class="text-[#333]">Lockheed Martin</span><span class="text-[#333]">$67.3M</span><span class="text-[#333]">2026-07-08</span><span class="text-[#E5B73C]">PA</span></div></td></tr>
+            <tr class="relative"><td colspan="7" class="relative overflow-hidden"><div class="absolute inset-0 z-10" style="backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div><div class="opacity-15 py-3 px-3 flex items-center gap-4 text-sm"><span class="font-['Manrope'] font-semibold text-[#E5B73C]">N00189-26-C-0500</span><span class="text-[#333]">334118</span><span class="text-[#333]">DON</span><span class="text-[#333]">Raytheon</span><span class="text-[#333]">$94.1M</span><span class="text-[#333]">2026-07-10</span><span class="text-[#27272]">CA</span></div></td></tr>
+            <tr class="relative"><td colspan="7" class="relative overflow-hidden"><div class="absolute inset-0 z-10" style="backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div><div class="opacity-15 py-3 px-3 flex items-center gap-4 text-sm"><span class="font-['Manrope'] font-semibold text-[#E5B73C]">W52P1J-26-C-0501</span><span class="text-[#333]">332312</span><span class="text-[#333]">DLA</span><span class="text-[#333]">Lockheed Martin</span><span class="text-[#333]">$67.3M</span><span class="text-[#333]">2026-07-08</span><span class="text-[#27272]">PA</span></div></td></tr>
           </tbody>
         </table>
         <div class="text-center py-4 bg-gradient-to-t from-[#FAFAF8] to-white">
-          <span class="text-[#999] text-sm">+ 1M+ additional awards spanning 900+ NAICS codes across 80+ agencies</span>
+          <span class="text-[#999] text-sm">+ 70K+ additional records spanning 900+ NAICS codes across 80+ agencies</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing: 3-tier subscription -->
+  <!-- Pricing: 3-tier launch pricing (no purchase buttons) -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Choose Your Plan</h2>
-      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">The ATOM feed dies July 31. Don't lose your competitive intelligence pipeline.</p>
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Launch Pricing</h2>
+      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">The ATOM feed dies July 31. Don't lose your competitive intelligence pipeline. Get notified when we go live.</p>
       <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <!-- Single NAICS -->
         <div class="bg-white border border-[#DED8D0] rounded-xl p-8 hover:border-[#E5B73C] transition-colors">
@@ -174,10 +179,6 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> All contract actions & mods</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
           </ul>
-          <button onclick="checkout('govcon_velocity_single')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Subscribe — $199/mo
-          </button>
         </div>
         <!-- Multi NAICS (Featured) -->
         <div class="bg-white border-2 border-[#E5B73C] rounded-xl p-8 shadow-sm scale-[1.02]">
@@ -191,10 +192,6 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Full modification tracking</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Competitive intelligence view</li>
           </ul>
-          <button onclick="checkout('govcon_velocity_multi')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Subscribe — $349/mo
-          </button>
         </div>
         <!-- Enterprise -->
         <div class="bg-white border border-[#DED8D0] rounded-xl p-8 hover:border-[#E5B73C] transition-colors">
@@ -208,11 +205,46 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Change-log tracking</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Priority email support</li>
           </ul>
-          <button onclick="checkout('govcon_velocity_enterprise')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Subscribe — $499/mo
-          </button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Signup -->
+  <section id="waitlist" class="bg-white py-16 border-t border-[#DED8D0]">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="bg-[#F5F4F0] rounded-xl border border-[#DED8D0] p-10 md:p-12 shadow-sm">
+        <h2 class="font-['Manrope'] text-2xl md:text-3xl font-bold text-[#2D2D2D] mb-3">
+          Get Notified at Launch
+        </h2>
+        <p class="text-[#666] max-w-md mx-auto mb-8 leading-relaxed">
+          GovCon Velocity is in final development. Leave your email and we'll notify you the moment subscriptions open — plus early-access pricing for waitlist members.
+        </p>
+        <form name="govcon-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/data/govcon-intel/success" class="max-w-md mx-auto text-left">
+          <input type="hidden" name="form-name" value="govcon-waitlist" />
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-['Manrope'] font-semibold text-[#2D2D2D] mb-1">Work Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 border border-[#DED8D0] rounded-md text-sm focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C] bg-white"
+              placeholder="you@company.com" />
+          </div>
+          <div class="mb-6">
+            <label for="naics" class="block text-sm font-['Manrope'] font-semibold text-[#2D2D2D] mb-1">NAICS Code(s) of Interest <span class="text-[#999] font-normal">(optional)</span></label>
+            <input type="text" id="naics" name="naics"
+              class="w-full px-4 py-3 border border-[#DED8D0] rounded-md text-sm focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C] bg-white"
+              placeholder="e.g. 541511, 541512, 541513" />
+          </div>
+          <button type="submit"
+            class="w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors cursor-pointer border-0">
+            Join the Waitlist
+          </button>
+          <p class="text-xs text-[#999] mt-4 text-center">
+            No spam. No payment required. We'll email once when we launch — that's it.
+          </p>
+        </form>
       </div>
     </div>
   </section>
@@ -225,12 +257,12 @@ import Layout from '../../layouts/Layout.astro';
         FPDS Is Dead. <span class="text-[#E5B73C]">Your Pipeline Doesn't Have to Be.</span>
       </h2>
       <p class="text-[#999] max-w-lg mx-auto mb-10 leading-relaxed">
-        The ATOM feed retires July 31. Every prime contractor who relied on automated FPDS data now needs a replacement. Don't build your own wrapper — subscribe to yours.
+        The ATOM feed retires July 31. Every prime contractor who relied on automated FPDS data now needs a replacement. Get on the waitlist and be first to know when we launch.
       </p>
-      <button onclick="checkout('govcon_velocity_single')"
-         class="checkout-btn inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors border-0 cursor-pointer">
-        Start Monitoring — $199/mo
-      </button>
+      <a href="#waitlist"
+        class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors">
+        Join the Waitlist →
+      </a>
     </div>
   </section>
 
@@ -247,7 +279,7 @@ import Layout from '../../layouts/Layout.astro';
         "price": "199",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-07-01",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       },
       {
@@ -256,7 +288,7 @@ import Layout from '../../layouts/Layout.astro';
         "price": "349",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-07-01",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       },
       {
@@ -265,27 +297,9 @@ import Layout from '../../layouts/Layout.astro';
         "price": "499",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-07-01",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       }
     ]
   })} />
-
-  <!-- Checkout Script -->
-  <script is:inline>
-    async function checkout(productKey) {
-      try {
-        const resp = await fetch('/api/create-checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product: productKey })
-        });
-        if (!resp.ok) throw new Error('Checkout failed');
-        const data = await resp.json();
-        if (data.url) window.location.href = data.url;
-      } catch (e) {
-        alert('Checkout unavailable. Please try again or contact support.');
-      }
-    }
-  </script>
 </Layout>
