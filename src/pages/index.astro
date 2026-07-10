@@ -1,35 +1,67 @@
 ---
-// Minimal placeholder — site paused while delivery pipeline is finalized.
+import Layout from '../layouts/Layout.astro';
+const siteUrl = 'https://thalux.ai';
 ---
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thalux AI — Coming Soon</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0a0a0a;
-      color: #e5e5e5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 { font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    p { font-size: 1.1rem; color: #888; max-width: 500px; line-height: 1.6; }
-    .mark { color: #555; margin-top: 2rem; font-size: 0.85rem; }
-  </style>
-</head>
-<body>
-  <h1>Thalux AI</h1>
-  <p>We're building something new. More details coming soon.</p>
-  <p class="mark">Lancaster County, PA</p>
-</body>
-</html>
+<Layout title="Government Data, Engineered for Commerce">
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-16">
+    <div class="max-w-3xl">
+      <h1 class="font-['Manrope'] text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#2D2D2D] mb-4">
+        Government Data,<br />
+        <span class="text-[#E5B73C]">Engineered for Commerce</span>
+      </h1>
+      <p class="text-[#333] text-lg leading-relaxed max-w-xl mb-8">
+        Clean, structured datasets from official government sources — federal contract awards, foreclosure filings, OSHA injury data, commercial permits, and FDIC bank intelligence — delivered as flat CSV on a fixed cadence. No scrapers, no APIs, no engineering overhead.
+      </p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+        <a href="/data/fdic-bankintel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">BankIntel</a>
+        <span class="text-[#DED8D0]">·</span>
+        <a href="/data/foreclosure-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">ForeclosureIntel</a>
+        <span class="text-[#DED8D0]">·</span>
+        <a href="/data/osha-compliance" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">OSHA Compliance</a>
+        <span class="text-[#DED8D0]">·</span>
+        <a href="/data/commercial-permits" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">CommercialPermits</a>
+        <span class="text-[#DED8D0]">·</span>
+        <a href="/data/govcon-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">GovCon Velocity</a>
+      </div>
+      <p class="text-sm text-[#666] mt-4 leading-relaxed">
+        GovCon Velocity launches ahead of the ATOM feed retirement on July 31, 2026. <a href="/data/govcon-intel#waitlist" class="text-[#E5B73C] hover:text-[#CDA333] underline transition-colors">Join the waitlist</a> for early-access pricing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Catalog Grid -->
+  <section class="bg-white py-16 border-t border-[#DED8D0]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-8">Data Catalog</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- BankIntel -->
+        <a href="/data/fdic-bankintel" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">BankIntel</div>
+          <p class="text-sm text-[#666] leading-relaxed">FDIC-insured institution directory — 4,185 active banks, enriched with asset tier classifications.</p>
+        </a>
+        <!-- ForeclosureIntel -->
+        <a href="/data/foreclosure-intel" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">ForeclosureIntel</div>
+          <p class="text-sm text-[#666] leading-relaxed">Nationwide default and foreclosure filings — NODs, lis pendens, auction notices from 3,200+ counties.</p>
+        </a>
+        <!-- OSHA Compliance -->
+        <a href="/data/osha-compliance" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">OSHA Compliance</div>
+          <p class="text-sm text-[#666] leading-relaxed">300 Log recordable injury data — 850K+ incidents across 900+ NAICS codes, EHS-ready.</p>
+        </a>
+        <!-- Commercial Permits -->
+        <a href="/data/commercial-permits" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">CommercialPermits</div>
+          <p class="text-sm text-[#666] leading-relaxed">Building permit and contractor license data — 1.2M+ filings across 50 states, normalized.</p>
+        </a>
+        <!-- GovCon Velocity -->
+        <a href="/data/govcon-intel" class="block p-6 rounded-xl border-2 border-[#E5B73C] bg-white hover:shadow-sm transition-shadow">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">GovCon Velocity <span class="text-xs text-[#E5B73C] font-semibold">NEW</span></div>
+          <p class="text-sm text-[#666] leading-relaxed">Weekly NAICS-segmented CSV drop-feed of federal contract awards. Launching ahead of the ATOM retirement Jul 31.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -39,18 +39,6 @@
   status = 301
 
 [[redirects]]
-  from = "/data/fdic-bankintel"
-  to = "/data/govcon-intel"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/data/fdic-bankintel/*"
-  to = "/data/govcon-intel"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/data/foreclosure-intel"
   to = "/data/govcon-intel"
   status = 301
