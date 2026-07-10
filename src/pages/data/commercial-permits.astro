@@ -9,7 +9,7 @@ import Layout from '../../layouts/Layout.astro';
       <div>
         <div class="flex flex-wrap gap-2 mb-5">
           <span class="inline-block bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
-            ⚡ Data Product
+            ⚡ Coming Soon
           </span>
           <span class="inline-block bg-[rgba(16,185,129,0.12)] text-[#10B981] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
             June 2026 Tracking
@@ -170,11 +170,11 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Pricing -->
+  <!-- Launch Pricing -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Choose Your Plan</h2>
-      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Track construction activity from the data up.</p>
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Launch Pricing</h2>
+      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Get notified when this dataset becomes available.</p>
       <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         <div class="bg-white border border-[#DED8D0] rounded-xl p-8 hover:border-[#E5B73C] transition-colors">
           <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">One-Time Snapshot</div>
@@ -186,10 +186,6 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Immediate digital delivery</li>
           </ul>
-          <button onclick="checkout('commercial_permits_one_time')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Buy Now — $49
-          </button>
         </div>
         <div class="bg-white border-2 border-[#E5B73C] rounded-xl p-8 shadow-sm">
           <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">Monthly Subscription</div>
@@ -201,11 +197,46 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Preferential email support</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Cancel anytime — keep last snapshot</li>
           </ul>
-          <button onclick="checkout('commercial_permits_monthly')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Subscribe — $99/mo
-          </button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Signup -->
+  <section id="waitlist" class="bg-white py-16 border-t border-[#DED8D0]">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="bg-[#F5F4F0] rounded-xl border border-[#DED8D0] p-10 md:p-12 shadow-sm">
+        <h2 class="font-['Manrope'] text-2xl md:text-3xl font-bold text-[#2D2D2D] mb-3">
+          Get Notified at Launch
+        </h2>
+        <p class="text-[#666] max-w-md mx-auto mb-8 leading-relaxed">
+          CommercialPermits is in development. Leave your email and we'll notify you when it's ready.
+        </p>
+        <form name="permits-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/data/govcon-intel/success" class="max-w-md mx-auto text-left">
+          <input type="hidden" name="form-name" value="permits-waitlist" />
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-['Manrope'] font-semibold text-[#2D2D2D] mb-1">Work Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 border border-[#DED8D0] rounded-md text-sm focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C] bg-white"
+              placeholder="you@company.com" />
+          </div>
+          <div class="mb-6">
+            <label for="permit_type" class="block text-sm font-['Manrope'] font-semibold text-[#2D2D2D] mb-1">Permit Type Interest <span class="text-[#999] font-normal">(optional)</span></label>
+            <input type="text" id="permit_type" name="permit_type"
+              class="w-full px-4 py-3 border border-[#DED8D0] rounded-md text-sm focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C] bg-white"
+              placeholder="e.g. Building, Mechanical, Plumbing" />
+          </div>
+          <button type="submit"
+            class="w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors cursor-pointer border-0">
+            Join the Waitlist
+          </button>
+          <p class="text-xs text-[#999] mt-4 text-center">
+            No spam. No payment required. We'll email you once when we launch — that's it.
+          </p>
+        </form>
       </div>
     </div>
   </section>
@@ -220,10 +251,10 @@ import Layout from '../../layouts/Layout.astro';
       <p class="text-[#999] max-w-lg mx-auto mb-10 leading-relaxed">
         Linked permits and contractor licenses for the full construction intelligence picture. No portal navigation required.
       </p>
-      <button onclick="checkout('commercial_permits_one_time')"
-         class="checkout-btn inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors border-0 cursor-pointer">
-        Buy Full Dataset — $49
-      </button>
+      <a href="#waitlist"
+        class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors">
+        Join the Waitlist →
+      </a>
     </div>
   </section>
 
@@ -239,7 +270,7 @@ import Layout from '../../layouts/Layout.astro';
         "price": "49",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-06-29",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       },
       {
@@ -248,26 +279,9 @@ import Layout from '../../layouts/Layout.astro';
         "price": "99",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-06-29",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       }
     ]
   })} />
-
-  <script is:inline>
-    async function checkout(productKey) {
-      try {
-        const resp = await fetch('/api/create-checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product: productKey })
-        });
-        if (!resp.ok) throw new Error('Checkout failed');
-        const data = await resp.json();
-        if (data.url) window.location.href = data.url;
-      } catch (e) {
-        alert('Checkout unavailable. Please try again or contact support.');
-      }
-    }
-  </script>
 </Layout>

@@ -9,7 +9,7 @@ import Layout from '../../layouts/Layout.astro';
       <div>
         <div class="flex flex-wrap gap-2 mb-5">
           <span class="inline-block bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
-            ⚡ Data Product
+            ⚡ Coming Soon
           </span>
           <span class="inline-block bg-[rgba(16,185,129,0.12)] text-[#10B981] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
             June 2026 Tracking
@@ -173,8 +173,8 @@ import Layout from '../../layouts/Layout.astro';
   <!-- Pricing -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Choose Your Plan</h2>
-      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Stop scraping county sites. Start analyzing.</p>
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Launch Pricing</h2>
+      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Get notified when this dataset becomes available.</p>
       <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         <!-- One-Time -->
         <div class="bg-white border border-[#DED8D0] rounded-xl p-8 hover:border-[#E5B73C] transition-colors">
@@ -187,10 +187,6 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Immediate digital delivery</li>
           </ul>
-          <button onclick="checkout('foreclosure_intel_one_time')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Buy Now — $49
-          </button>
         </div>
         <!-- Monthly -->
         <div class="bg-white border-2 border-[#E5B73C] rounded-xl p-8 shadow-sm">
@@ -203,12 +199,35 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Preferential email support</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Cancel anytime — keep last snapshot</li>
           </ul>
-          <button onclick="checkout('foreclosure_intel_monthly')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Subscribe — $99/mo
-          </button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Form -->
+  <section id="waitlist" class="bg-white py-16 border-t border-b border-[#DED8D0]">
+    <div class="max-w-xl mx-auto px-6 text-center">
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] mb-2">Get Notified at Launch</h2>
+      <p class="text-[#666] mb-8">Leave your details and we'll email you when ForeclosureIntel data is ready to purchase.</p>
+      <form name="foreclosure-waitlist" method="POST" action="/data/govcon-intel/success" netlify class="text-left space-y-5">
+        <input type="hidden" name="form-name" value="foreclosure-waitlist" />
+        <div>
+          <label class="block text-sm font-['Manrope'] font-semibold text-[#2D2D2D] mb-1" for="work-email">Work Email <span class="text-[#E5B73C]">*</span></label>
+          <input type="email" id="work-email" name="work-email" required
+                 class="w-full border border-[#DED8D0] rounded-md px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#E5B73C] transition-colors"
+                 placeholder="you@company.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-['Manrope'] font-semibold text-[#2D2D2D] mb-1" for="county-interest">County / State Interest <span class="text-[#999]">(optional)</span></label>
+          <input type="text" id="county-interest" name="county-interest"
+                 class="w-full border border-[#DED8D0] rounded-md px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#E5B73C] transition-colors"
+                 placeholder="e.g. Los Angeles, CA or nationwide" />
+        </div>
+        <button type="submit"
+                class="w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors cursor-pointer border-0">
+          Join the Waitlist
+        </button>
+      </form>
     </div>
   </section>
 
@@ -222,10 +241,10 @@ import Layout from '../../layouts/Layout.astro';
       <p class="text-[#999] max-w-lg mx-auto mb-10 leading-relaxed">
         No more scraping. No more inconsistent formats. Structured foreclosure and default data for the entire US.
       </p>
-      <button onclick="checkout('foreclosure_intel_one_time')"
-         class="checkout-btn inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors border-0 cursor-pointer">
-        Buy Full Dataset — $49
-      </button>
+      <a href="#waitlist"
+         class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors no-underline">
+        Join the Waitlist →
+      </a>
     </div>
   </section>
 
@@ -242,7 +261,7 @@ import Layout from '../../layouts/Layout.astro';
         "price": "49",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-06-29",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       },
       {
@@ -251,27 +270,10 @@ import Layout from '../../layouts/Layout.astro';
         "price": "99",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-06-29",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       }
     ]
   })} />
 
-  <!-- Checkout Script -->
-  <script is:inline>
-    async function checkout(productKey) {
-      try {
-        const resp = await fetch('/api/create-checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product: productKey })
-        });
-        if (!resp.ok) throw new Error('Checkout failed');
-        const data = await resp.json();
-        if (data.url) window.location.href = data.url;
-      } catch (e) {
-        alert('Checkout unavailable. Please try again or contact support.');
-      }
-    }
-  </script>
-</Layout>
+  </Layout>

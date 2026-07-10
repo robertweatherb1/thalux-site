@@ -9,7 +9,7 @@ import Layout from '../../layouts/Layout.astro';
       <div>
         <div class="flex flex-wrap gap-2 mb-5">
           <span class="inline-block bg-[rgba(229,183,60,0.12)] text-[#E5B73C] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
-            ⚡ Data Product
+            ⚡ Coming Soon
           </span>
           <span class="inline-block bg-[rgba(16,185,129,0.12)] text-[#10B981] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
             June 2026 Tracking
@@ -172,8 +172,8 @@ import Layout from '../../layouts/Layout.astro';
   <!-- Pricing -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Choose Your Plan</h2>
-      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Benchmark your safety program against real industry data.</p>
+      <h2 class="font-['Manrope'] text-3xl font-bold text-[#2D2D2D] text-center mb-2">Launch Pricing</h2>
+      <p class="text-[#666] text-center max-w-lg mx-auto mb-10">Get notified when this dataset becomes available.</p>
       <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         <div class="bg-white border border-[#DED8D0] rounded-xl p-8 hover:border-[#E5B73C] transition-colors">
           <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">One-Time Snapshot</div>
@@ -185,10 +185,9 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Single commercial license</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Immediate digital delivery</li>
           </ul>
-          <button onclick="checkout('osha_compliance_one_time')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Buy Now — $49
-          </button>
+          <div class="w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base text-center opacity-60 cursor-not-allowed">
+            Coming Soon
+          </div>
         </div>
         <div class="bg-white border-2 border-[#E5B73C] rounded-xl p-8 shadow-sm">
           <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">Monthly Subscription</div>
@@ -200,12 +199,38 @@ import Layout from '../../layouts/Layout.astro';
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Preferential email support</li>
             <li class="flex items-center gap-2 text-[#333]"><span class="text-[#E5B73C] font-bold">✓</span> Cancel anytime — keep last snapshot</li>
           </ul>
-          <button onclick="checkout('osha_compliance_monthly')"
-             class="checkout-btn w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors text-center cursor-pointer border-0">
-            Subscribe — $99/mo
-          </button>
+          <div class="w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base text-center opacity-60 cursor-not-allowed">
+            Coming Soon
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Form -->
+  <section class="py-16 bg-[#FAFAF8] border-t border-b border-[#DED8D0]">
+    <div class="max-w-lg mx-auto px-6">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] text-center mb-2">Get Notified at Launch</h2>
+      <p class="text-[#666] text-center text-sm mb-8">Be the first to know when OSHA Compliance data is ready for purchase.</p>
+      <form name="osha-waitlist" method="POST" action="/data/govcon-intel/success" netlify class="space-y-4">
+        <input type="hidden" name="form-name" value="osha-waitlist" />
+        <div>
+          <label class="block font-['Manrope'] font-semibold text-sm text-[#2D2D2D] mb-1" for="email">Work Email *</label>
+          <input type="email" id="email" name="email" required
+                 class="w-full border border-[#DED8D0] rounded-md py-3 px-4 text-sm text-[#2D2D2D] bg-white focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C]"
+                 placeholder="you@company.com" />
+        </div>
+        <div>
+          <label class="block font-['Manrope'] font-semibold text-sm text-[#2D2D2D] mb-1" for="naics">NAICS Interest (optional)</label>
+          <input type="text" id="naics" name="naics"
+                 class="w-full border border-[#DED8D0] rounded-md py-3 px-4 text-sm text-[#2D2D2D] bg-white focus:outline-none focus:border-[#E5B73C] focus:ring-1 focus:ring-[#E5B73C]"
+                 placeholder="e.g. 332312, 236220" />
+        </div>
+        <button type="submit"
+           class="w-full bg-[#E5B73C] text-white py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors border-0 cursor-pointer">
+          Join the Waitlist →
+        </button>
+      </form>
     </div>
   </section>
 
@@ -219,10 +244,10 @@ import Layout from '../../layouts/Layout.astro';
       <p class="text-[#999] max-w-lg mx-auto mb-10 leading-relaxed">
         Get the structured injury data you need for loss-run analysis and EHS benchmarking across 900+ NAICS codes.
       </p>
-      <button onclick="checkout('osha_compliance_one_time')"
-         class="checkout-btn inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors border-0 cursor-pointer">
-        Buy Full Dataset — $49
-      </button>
+      <a href="#waitlist"
+         class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors">
+        Join the Waitlist →
+      </a>
     </div>
   </section>
 
@@ -238,7 +263,7 @@ import Layout from '../../layouts/Layout.astro';
         "price": "49",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-06-29",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       },
       {
@@ -247,26 +272,11 @@ import Layout from '../../layouts/Layout.astro';
         "price": "99",
         "priceCurrency": "USD",
         "priceValidUntil": "2027-06-29",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/PreOrder",
         "seller": { "@type": "Organization", "name": "Thalux AI" }
       }
     ]
   })} />
 
-  <script is:inline>
-    async function checkout(productKey) {
-      try {
-        const resp = await fetch('/api/create-checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product: productKey })
-        });
-        if (!resp.ok) throw new Error('Checkout failed');
-        const data = await resp.json();
-        if (data.url) window.location.href = data.url;
-      } catch (e) {
-        alert('Checkout unavailable. Please try again or contact support.');
-      }
-    }
-  </script>
+  <!-- checkout() removed — page is waitlist-only -->
 </Layout>
