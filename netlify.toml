@@ -1,9 +1,37 @@
 # Netlify config for Thalux AI site
 # Deployed from ~/projects/thalux-site/
+#
+# DEPLOYMENT RULE: Production = `production` branch only.
+# `main` branch generates deploy previews for visual QC before any live push.
+# Robert MUST approve the deploy preview URL before anything goes to production.
 
 [build]
   command = "npm run build"
   publish = "dist/"
+
+[build.processing]
+  skip_processing = false
+
+# ── Deploy Preview Context ──────────────────────────────────────────────
+# Pushes to any branch (including `main`) generate preview URLs:
+#   https://main--thalux-ai.netlify.app
+# These DO NOT affect production — they're for visual QC and inspection only.
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
+# ── Production Context ──────────────────────────────────────────────────
+# Production deploys ONLY from the `production` branch.
+# After QC approval: git push origin main:production
+
+[context.production]
+  command = "npm run build"
+  environment = { PRODUCTION = "true" }
+
+# ── Redirects ───────────────────────────────────────────────────────────
 
 [[redirects]]
   from = "/services/*"
