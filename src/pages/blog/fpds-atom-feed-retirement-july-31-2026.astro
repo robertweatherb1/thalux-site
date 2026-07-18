@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="FPDS ATOM Feed Retires July 31, 2026 — What Contractors Need to Know">
+  <article class="max-w-3xl mx-auto px-6 pt-16 pb-20">
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="inline-block bg-[rgba(220,38,38,0.1)] text-[#DC2626] font-['Manrope'] font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider">
+          Deadline: July 31, 2026
+        </span>
+        <span class="inline-block bg-[rgba(229,183,60,0.1)] text-[#8B7D3C] font-['Manrope'] text-xs px-4 py-2 rounded-full">
+          Federal Contracting
+        </span>
+      </div>
+      <h1 class="font-['Manrope'] text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-[#2D2D2D] mb-4">
+        FPDS ATOM Feed Retires July 31, 2026<br />
+        <span class="text-[#E5B73C]">What Contractors Need to Know</span>
+      </h1>
+      <p class="text-[#666] text-sm">Published July 18, 2026 • 5 min read</p>
+    </div>
+
+    <!-- Key Takeaway Box -->
+    <div class="bg-[#FFF9E6] border border-[#E5B73C] rounded-xl p-6 mb-10">
+      <p class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">⚠️ Key Takeaway</p>
+      <p class="text-[#333] text-sm leading-relaxed">
+        The FPDS.gov ATOM feed — which thousands of contractors, subcontractors, and data integrators rely on for automated federal contract award data — will be fully retired on <strong>July 31, 2026</strong>. After this date, the legacy feed will stop serving data entirely. The replacement is the <a href="https://open.gsa.gov/api/contract-awards/" class="text-[#E5B73C] underline" target="_blank">SAM.gov Contract Awards API</a>, but migrating requires engineering work that many small-to-mid-size contractors haven't started.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <section class="mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-4">What's Happening and Why</h2>
+      <p class="text-[#333] leading-relaxed mb-4">
+        On February 24, 2026, GSA decommissioned FPDS.gov — the Federal Procurement Data System's public-facing search application (<a href="https://sam.gov/announcements/fpdsgov-decommissions-february-24-2026-0" class="text-[#E5B73C] underline" target="_blank">source</a>). All contract award search functionality was moved to SAM.gov as part of GSA's multi-year modernization effort.
+      </p>
+      <p class="text-[#333] leading-relaxed mb-4">
+        The FPDS ATOM feed — the automated data pipeline that many contractors use to ingest federal contract award data programmatically — is the last piece to be retired. The official retirement date is <strong>July 31, 2026</strong> (<a href="https://bhskyassociates.com/federal-procurement-modernization-fpds-gov-and-esrs-gov-retired-as-key-functions-move-to-sam-gov/" class="text-[#E5B73C] underline" target="_blank">source</a>).
+      </p>
+      <p class="text-[#333] leading-relaxed">
+        The replacement is the <a href="https://open.gsa.gov/api/contract-awards/" class="text-[#E5B73C] underline" target="_blank">SAM.gov Contract Awards API</a> — a REST API that returns contract award data in JSON format. It supports synchronous queries (up to 100 records per page, 400K record cap) and asynchronous extract jobs (up to 1M records in CSV or JSON).
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-4">Who This Affects</h2>
+      <p class="text-[#333] leading-relaxed mb-4">If your organization does any of the following, this deadline affects you:</p>
+      <ul class="space-y-3 text-[#333]">
+        <li class="flex items-start gap-3">
+          <span class="text-[#E5B73C] shrink-0 mt-1">▸</span>
+          <span><strong>Prime contractors</strong> who track competitor awards and market share across agencies</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#E5B73C] shrink-0 mt-1">▸</span>
+          <span><strong>Subcontractors</strong> who monitor prime contractor awards for teaming opportunities</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#E5B73C] shrink-0 mt-1">▸</span>
+          <span><strong>GovCon data integrators</strong> who maintain automated pipelines ingesting the ATOM feed</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#E5B73C] shrink-0 mt-1">▸</span>
+          <span><strong>Business development teams</strong> who use award data for competitive intelligence</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-[#E5B73C] shrink-0 mt-1">▸</span>
+          <span><strong>Research and consulting firms</strong> that provide federal market analysis to clients</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-4">The Migration Challenge</h2>
+      <p class="text-[#333] leading-relaxed mb-4">
+        On paper, the migration is straightforward: stop consuming the ATOM feed, start calling the SAM.gov Contract Awards API. In practice, there are several pain points:
+      </p>
+      <div class="space-y-4">
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">1. API Key Registration</h3>
+          <p class="text-sm text-[#666]">You need a SAM.gov account to generate an API key. The public API tier has a 10 requests/day rate limit. To get 1,000 requests/day, you need a registered entity account with a specific role assignment.</p>
+        </div>
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">2. Response Format Changes</h3>
+          <p class="text-sm text-[#666]">The ATOM feed delivered XML. The new API returns JSON. If your pipeline expects XML, you'll need to rewrite your parsing layer.</p>
+        </div>
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">3. Pagination and Volume Limits</h3>
+          <p class="text-sm text-[#666]">The synchronous API returns a maximum of 100 records per page and caps at 400K records. The async extract API handles up to 1M records but requires polling for completion. Neither is a drop-in replacement for the ATOM feed's streaming model.</p>
+        </div>
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">4. Engineering Overhead</h3>
+          <p class="text-sm text-[#666]">Estimating conservatively: building a production-grade SAM.gov API integration requires 40+ hours of engineering work — API key management, pagination handling, error recovery, change tracking, and data normalization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-4">Your Options</h2>
+      <div class="space-y-4">
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">Option A: Build Your Own Integration</h3>
+          <p class="text-sm text-[#666] mb-2">Register a SAM.gov account, generate an API key, build the extraction pipeline, handle pagination, manage rate limits, and maintain the integration over time.</p>
+          <p class="text-sm text-[#999]">Cost: ~40+ hours of engineering time + ongoing maintenance</p>
+        </div>
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">Option B: GovCon Velocity (Thalux AI)</h3>
+          <p class="text-sm text-[#666] mb-2">Pre-scrubbed, NAICS-segmented CSV of every federal contract award, modification, and sub-award exceeding the micro-purchase threshold. Delivered to your inbox weekly. No engineering required.</p>
+          <p class="text-sm text-[#999]">Cost: $199/mo (single NAICS) — $499/mo (unlimited)</p>
+        </div>
+        <div class="bg-white border border-[#DED8D0] rounded-xl p-5">
+          <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-2">Option C: Do Nothing</h3>
+          <p class="text-sm text-[#666] mb-2">After July 31, your ATOM feed will stop returning data. Any automated pipeline relying on it will begin failing silently. Competitive intelligence gaps will grow as you lose visibility into new awards.</p>
+          <p class="text-sm text-[#DC2626]">Risk: complete loss of automated award intelligence</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-4">What's in the GovCon Velocity Feed</h2>
+      <p class="text-[#333] leading-relaxed mb-4">
+        GovCon Velocity delivers 19 data columns per record, covering every contract action that matters:
+      </p>
+      <div class="bg-white border border-[#DED8D0] rounded-xl overflow-hidden mb-4">
+        <table class="w-full text-sm">
+          <thead class="bg-[#FAFAF8]">
+            <tr class="border-b border-[#DED8D0]">
+              <th class="text-left py-3 px-4 font-['Manrope'] font-semibold text-[#2D2D2D]">Column</th>
+              <th class="text-left py-3 px-4 font-['Manrope'] font-semibold text-[#2D2D2D]">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-medium">award_id</td><td class="text-[#666]">Unique award identifier</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-medium">piid</td><td class="text-[#666]">Procurement Instrument Identifier</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-medium">agency_name</td><td class="text-[#666]">Contracting agency name</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-medium">naics_code</td><td class="text-[#666]">6-digit NAICS code</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-medium">dollars_obligated</td><td class="text-[#666]">Amount obligated on this action</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-medium">awardee_name</td><td class="text-[#666]">Prime awardee legal name</td></tr>
+            <tr class="border-b border-[#DED8D0]"><td class="py-3 px-4 font-medium">competition_status</td><td class="text-[#666]">Competed or not</td></tr>
+            <tr class="border-b border-[#DED8D0] bg-[#FAFAF8]"><td class="py-3 px-4 font-medium">set_aside_description</td><td class="text-[#666]">Small business set-aside type</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-[#666]">Full schema: 19 columns covering award value, competition status, set-aside type, place of performance, and more. <a href="/data/govcon-intel" class="text-[#E5B73C] underline">View the full product page →</a></p>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-4">The Timeline</h2>
+      <div class="space-y-0">
+        <div class="flex items-start gap-4 py-4 border-l-2 border-[#E5B73C] pl-4">
+          <div class="shrink-0">
+            <div class="w-3 h-3 bg-[#E5B73C] rounded-full -ml-5 mt-1"></div>
+          </div>
+          <div>
+            <p class="font-['Manrope'] font-bold text-[#2D2D2D]">February 24, 2026</p>
+            <p class="text-sm text-[#666]">FPDS.gov decommissioned. ezSearch redirected to SAM.gov. ATOM feed still operational.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 py-4 border-l-2 border-[#E5B73C] pl-4">
+          <div class="shrink-0">
+            <div class="w-3 h-3 bg-[#E5B73C] rounded-full -ml-5 mt-1"></div>
+          </div>
+          <div>
+            <p class="font-['Manrope'] font-bold text-[#2D2D2D]">July 31, 2026</p>
+            <p class="text-sm text-[#666]">ATOM feed fully retired. All automated data ingestion from the legacy feed stops.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 py-4 border-l-2 border-[#DC2626] pl-4">
+          <div class="shrink-0">
+            <div class="w-3 h-3 bg-[#DC2626] rounded-full -ml-5 mt-1"></div>
+          </div>
+          <div>
+            <p class="font-['Manrope'] font-bold text-[#DC2626]">August 1, 2026</p>
+            <p class="text-sm text-[#666]">Deadline passes. Pipelines consuming the ATOM feed will begin producing empty results. Teams without a replacement will lose competitive intelligence visibility.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[#2D2D2D] rounded-xl p-8 text-center mb-10">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-white mb-4">Don't Lose Your Pipeline</h2>
+      <p class="text-[#CCC] text-sm mb-6 max-w-md mx-auto leading-relaxed">
+        GovCon Velocity delivers clean, NAICS-segmented federal contract award data to your inbox every week. No engineering required. Join the waitlist for early-access pricing.
+      </p>
+      <a href="/data/govcon-intel#waitlist" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors">
+        Get Early Access →
+      </a>
+    </section>
+
+    <!-- Sources -->
+    <section class="border-t border-[#DED8D0] pt-8">
+      <h3 class="font-['Manrope'] font-bold text-[#2D2D2D] mb-3 text-sm uppercase tracking-wider">Sources</h3>
+      <ul class="space-y-2">
+        <li class="text-xs text-[#999]">
+          <a href="https://sam.gov/announcements/fpdsgov-decommissions-february-24-2026-0" class="text-[#E5B73C] underline" target="_blank">SAM.gov — FPDS.gov Decommissions on February 24, 2026</a>
+        </li>
+        <li class="text-xs text-[#999]">
+          <a href="https://bhskyassociates.com/federal-procurement-modernization-fpds-gov-and-esrs-gov-retired-as-key-functions-move-to-sam-gov/" class="text-[#E5B73C] underline" target="_blank">BH Sky Associates — Federal Procurement Modernization (March 2026)</a>
+        </li>
+        <li class="text-xs text-[#999]">
+          <a href="https://open.gsa.gov/api/contract-awards/" class="text-[#E5B73C] underline" target="_blank">GSA Open Technology — SAM.gov Contract Awards API Documentation</a>
+        </li>
+        <li class="text-xs text-[#999]">
+          <a href="https://sam.gov/announcements/contract-awards-data-and-searching-now-samgov" class="text-[#E5B73C] underline" target="_blank">SAM.gov — Contract Awards Data and Searching Now in SAM.gov</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</Layout>
