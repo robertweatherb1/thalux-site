@@ -51,35 +51,15 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
         <a href="/" class="font-['Manrope'] text-lg font-bold text-[#2D2D2D] tracking-tight">
           Thalux<span class="text-[#E5B73C]"> AI</span>
         </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                  <a href="/" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Home</a>
-                  <a href="/data/fdic-bankintel" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">BankIntel</a>
-                  <a href="/data/foreclosure-intel" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Foreclosures</a>
-                  <a href="/data/osha-compliance" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">OSHA</a>
-                  <a href="/data/commercial-permits" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Permits</a>
-                  <a href="/data/govcon-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors font-semibold">GovCon</a>
-                  <a href="/blog/fpds-atom-feed-retirement-july-31-2026" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Blog</a>
+        <a href="/" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Home</a>
+                  <a href="/data/govcon-intel" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Data</a>
+                  <a href="/services" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Services</a>
+                  <a href="/blog" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Blog</a>
                   <a href="/about" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">About</a>
                   <a href="/portal" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Client Portal</a>
                   <a href="/contact" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Contact</a>
                 </div>
-                <a href="/data/govcon-intel" class="bg-[#E5B73C] text-white px-5 py-2 rounded-md font-['Manrope'] font-bold text-sm hover:bg-[#CDA333] transition-colors">
-                  Browse Data
-                </a>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
-    <main>
-      <slot />
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#2D2D2D] text-white">
-      <div class="max-w-6xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-3 gap-10">
-          <div>
-            <div class="font-['Manrope'] text-xl font-bold mb-3">
+                <a class="bg-[#E5B73C] text-white px-5 py-2 rounded-md font-['Manrope'] font-bold text-sm hover:bg-[#CDA333] transition-colors">mb-3">
               Thalux<span class="text-[#E5B73C]"> AI</span>
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
