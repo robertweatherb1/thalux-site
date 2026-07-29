@@ -1,0 +1,19 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800" rel="stylesheet"/>
+  </defs>
+  <style>
+    .l-thalux { fill: #2D2D2D; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+    .l-ai { fill: #E5B73C; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+  </style>
+  <!-- V3 - Dual layered waves for depth -->
+  <g transform="translate(30, 22)">
+    <path d="M2 76 C18 52, 38 82, 58 56 C78 30, 98 60, 114 40" stroke="#086A78" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M8 70 C24 46, 44 76, 64 50 C84 24, 104 54, 120 34" stroke="#0B7B8A" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <circle cx="64" cy="24" r="12" fill="#E5B73C"/>
+  </g>
+  <g transform="translate(178, 78)">
+    <text class="l-thalux" x="0" y="0">Thalux</text>
+    <text class="l-ai" x="165" y="0">AI</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800" rel="stylesheet"/>
+  </defs>
+  <style>
+    .l-thalux { fill: #2D2D2D; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+    .l-ai { fill: #E5B73C; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+  </style>
+  <!-- V2 - Filled swoosh wave + sun -->
+  <g transform="translate(25, 18)">
+    <path d="M10 72 C30 38, 50 72, 75 42 C95 18, 115 52, 130 30 C130 30, 125 50, 110 58 C95 66, 75 64, 60 58 C40 50, 25 65, 10 72Z" fill="#0B7B8A"/>
+    <circle cx="80" cy="22" r="14" fill="#E5B73C"/>
+  </g>
+  <g transform="translate(180, 78)">
+    <text class="l-thalux" x="0" y="0">Thalux</text>
+    <text class="l-ai" x="165" y="0">AI</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800" rel="stylesheet"/>
+  </defs>
+  <style>
+    .l-thalux { fill: #2D2D2D; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+    .l-ai { fill: #E5B73C; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+  </style>
+  <!-- V4 - Bold horizon arc + large sun -->
+  <g transform="translate(28, 24)">
+    <path d="M0 60 C20 42, 50 68, 85 38 C110 16, 125 38, 130 28" stroke="#0B7B8A" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <circle cx="70" cy="30" r="15" fill="#E5B73C"/>
+  </g>
+  <g transform="translate(180, 78)">
+    <text class="l-thalux" x="0" y="0">Thalux</text>
+    <text class="l-ai" x="165" y="0">AI</text>
+  </g>
+</svg>
