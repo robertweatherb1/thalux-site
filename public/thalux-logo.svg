@@ -1,0 +1,23 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800" rel="stylesheet"/>
+  </defs>
+  <style>
+    .l-thalux { fill: #2D2D2D; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+    .l-ai { fill: #E5B73C; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 46px; }
+  </style>
+
+  <!-- Sun + Water Mark -->
+  <g transform="translate(30, 22)">
+    <!-- Water wave - flowing curve in teal -->
+    <path d="M4 68 C20 48, 40 78, 60 52 C80 26, 100 56, 116 36" stroke="#0B7B8A" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <!-- Sun rising above the wave - gold circle -->
+    <circle cx="60" cy="28" r="11" fill="#E5B73C"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(175, 78)">
+    <text class="l-thalux" x="0" y="0">Thalux</text>
+    <text class="l-ai" x="165" y="0">AI</text>
+  </g>
+</svg>
