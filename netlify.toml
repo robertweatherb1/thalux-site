@@ -34,11 +34,6 @@
 # ── Redirects ───────────────────────────────────────────────────────────
 
 [[redirects]]
-  from = "/services/*"
-  to = "/data/govcon-intel"
-  status = 301
-
-[[redirects]]
   from = "/api/portal"
   to = "/.netlify/functions/portal"
   status = 200
@@ -61,14 +56,4 @@
 [[redirects]]
   from = "/api/stripe-webhook"
   to = "/.netlify/functions/stripe-webhook"
-  status = 200
-
-[[redirects]]
-  from = "/api/download/bankintel"
-  to = "/.netlify/functions/download-bankintel"
-  status = 200
-
-[[redirects]]
-  from = "/api/download/bankintel/*"
-  to = "/.netlify/functions/download-bankintel"
   status = 200

@@ -1,67 +1,95 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const siteUrl = 'https://thalux.ai';
 ---
 
-<Layout title="Government Data, Engineered for Commerce">
+<Layout title="Your Shop's Digital Infrastructure">
   <!-- Hero Section -->
   <section class="max-w-6xl mx-auto px-6 pt-20 pb-16">
     <div class="max-w-3xl">
       <h1 class="font-['Manrope'] text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#2D2D2D] mb-4">
-        Government Data,<br />
-        <span class="text-[#E5B73C]">Engineered for Commerce</span>
+        Your Shop's <span class="text-[#E5B73C]">Digital Infrastructure</span>
       </h1>
       <p class="text-[#333] text-lg leading-relaxed max-w-xl mb-8">
-        Clean, structured datasets from official government sources — federal contract awards, foreclosure filings, OSHA injury data, commercial permits, and FDIC bank intelligence — delivered as flat CSV on a fixed cadence. No scrapers, no APIs, no engineering overhead.
+        Websites that work. Calls that get answered. Customers that find you. Built, managed, and delivered month-to-month.
       </p>
-      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
-        <a href="/data/fdic-bankintel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">BankIntel</a>
-        <span class="text-[#DED8D0]">·</span>
-        <a href="/data/foreclosure-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">ForeclosureIntel</a>
-        <span class="text-[#DED8D0]">·</span>
-        <a href="/data/osha-compliance" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">OSHA Compliance</a>
-        <span class="text-[#DED8D0]">·</span>
-        <a href="/data/commercial-permits" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">CommercialPermits</a>
-        <span class="text-[#DED8D0]">·</span>
-        <a href="/data/govcon-intel" class="text-[#E5B73C] hover:text-[#CDA333] transition-colors">GovCon Velocity</a>
-      </div>
-      <p class="text-sm text-[#666] mt-4 leading-relaxed">
-        GovCon Velocity launches ahead of the ATOM feed retirement on July 31, 2026. <a href="/data/govcon-intel#waitlist" class="text-[#E5B73C] hover:text-[#CDA333] underline transition-colors">Join the waitlist</a> for early-access pricing.
-      </p>
+      <a href="/contact" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold text-base hover:bg-[#CDA333] transition-colors">
+        15-Minute Call — No Pitch
+      </a>
     </div>
   </section>
 
-  <!-- Catalog Grid -->
+  <!-- Four Products Grid -->
   <section class="bg-white py-16 border-t border-[#DED8D0]">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-8">Data Catalog</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- BankIntel -->
-        <a href="/data/fdic-bankintel" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
-          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">BankIntel</div>
-          <p class="text-sm text-[#666] leading-relaxed">FDIC-insured institution directory — 4,185 active banks, enriched with asset tier classifications.</p>
-        </a>
-        <!-- ForeclosureIntel -->
-        <a href="/data/foreclosure-intel" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
-          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">ForeclosureIntel</div>
-          <p class="text-sm text-[#666] leading-relaxed">Nationwide default and foreclosure filings — NODs, lis pendens, auction notices from 3,200+ counties.</p>
-        </a>
-        <!-- OSHA Compliance -->
-        <a href="/data/osha-compliance" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
-          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">OSHA Compliance</div>
-          <p class="text-sm text-[#666] leading-relaxed">300 Log recordable injury data — 850K+ incidents across 900+ NAICS codes, EHS-ready.</p>
-        </a>
-        <!-- Commercial Permits -->
-        <a href="/data/commercial-permits" class="block p-6 rounded-xl border border-[#DED8D0] bg-white hover:border-[#E5B73C] transition-colors">
-          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">CommercialPermits</div>
-          <p class="text-sm text-[#666] leading-relaxed">Building permit and contractor license data — 1.2M+ filings across 50 states, normalized.</p>
-        </a>
-        <!-- GovCon Velocity -->
-        <a href="/data/govcon-intel" class="block p-6 rounded-xl border-2 border-[#E5B73C] bg-white hover:shadow-sm transition-shadow">
-          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">GovCon Velocity <span class="text-xs text-[#E5B73C] font-semibold">NEW</span></div>
-          <p class="text-sm text-[#666] leading-relaxed">Weekly NAICS-segmented CSV drop-feed of federal contract awards. Launching ahead of the ATOM retirement Jul 31.</p>
-        </a>
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-8">What We Build</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Website Management -->
+        <div class="p-6 rounded-xl border border-[#DED8D0] bg-white">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">Website Management</div>
+          <p class="text-sm text-[#666] leading-relaxed">A website that actually represents your business.</p>
+        </div>
+        <!-- GBP Optimization -->
+        <div class="p-6 rounded-xl border border-[#DED8D0] bg-white">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">Google Business Profile</div>
+          <p class="text-sm text-[#666] leading-relaxed">Show up when customers search. We claim, optimize, and manage your GBP.</p>
+        </div>
+        <!-- Facebook Marketing -->
+        <div class="p-6 rounded-xl border border-[#DED8D0] bg-white">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">Facebook Marketing</div>
+          <p class="text-sm text-[#666] leading-relaxed">Page setup, content calendar, and local ad management.</p>
+        </div>
+        <!-- Voice Receptionist -->
+        <div class="p-6 rounded-xl border border-[#DED8D0] bg-white">
+          <div class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-1">Voice Receptionist</div>
+          <p class="text-sm text-[#666] leading-relaxed">AI-powered phone answering. Captures every lead, never misses a call.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-['Manrope'] text-2xl font-bold text-[#2D2D2D] mb-10 text-center">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[rgba(229,183,60,0.12)] rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-[#E5B73C] font-['Manrope'] font-extrabold text-lg">01</span>
+          </div>
+          <h3 class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">We Audit Your Setup</h3>
+          <p class="text-sm text-[#666] leading-relaxed">15-minute call to understand your business and what's missing.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[rgba(229,183,60,0.12)] rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-[#E5B73C] font-['Manrope'] font-extrabold text-lg">02</span>
+          </div>
+          <h3 class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">We Build What's Missing</h3>
+          <p class="text-sm text-[#666] leading-relaxed">Website, GBP, Facebook, voice — tailored to your shop.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[rgba(229,183,60,0.12)] rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-[#E5B73C] font-['Manrope'] font-extrabold text-lg">03</span>
+          </div>
+          <h3 class="font-['Manrope'] font-bold text-lg text-[#2D2D2D] mb-2">We Manage It Monthly</h3>
+          <p class="text-sm text-[#666] leading-relaxed">Month-to-month. No long-term contracts. We earn our keep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#2D2D2D] py-20 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="w-16 h-0.5 bg-[rgba(229,183,60,0.4)] mx-auto mb-10"></div>
+      <h2 class="font-['Manrope'] text-3xl font-bold text-white mb-4">
+        Ready to <span class="text-[#E5B73C]">Get Found?</span>
+      </h2>
+      <p class="text-[#999] max-w-lg mx-auto mb-10 leading-relaxed">
+        15-minute call. No pressure. If we can't help, we'll tell you straight up.
+      </p>
+      <a href="/contact" class="inline-block bg-[#E5B73C] text-white px-8 py-4 rounded-md font-['Manrope'] font-bold hover:bg-[#CDA333] transition-colors">
+        Let's Talk
+      </a>
     </div>
   </section>
 </Layout>

@@ -10,9 +10,9 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Clean, structured government datasets delivered on schedule — federal contract awards, foreclosure filings, OSHA injury data, building permits, and FDIC bank intelligence. No engineering required." />
+    <meta name="description" content="Thalux AI builds the digital infrastructure for trade shops — websites, Google Business Profile, Facebook marketing, and AI voice receptionist. Month-to-month, no contracts." />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content="Clean, structured government datasets delivered on schedule. No scrapers, no APIs, no engineering overhead." />
+    <meta property="og:description" content="Websites that work. Calls that get answered. Customers that find you. Thalux AI — your shop's digital infrastructure." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={siteUrl + Astro.url.pathname} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,9 +26,11 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Thalux AI",
-      "description": "Government data intelligence and contract award analytics. Clean datasets for sales teams.",
+      "description": "Digital infrastructure for trade shops — websites, GBP, Facebook marketing, and AI voice receptionist.",
       "url": "https://thalux.ai",
-      "priceRange": "$49-$499"
+      "email": "admin@thalux.ai",
+      "telephone": "+17175370566",
+      "priceRange": "$195-$499"
     })} />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GJEFJEFK0"></script>
@@ -42,7 +44,7 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
   <body class="bg-[#F5F4F0] text-[#2D2D2D] font-['Inter'] antialiased">
     <!-- Announcement Bar -->
     <div class="bg-[#E5B73C] text-white text-center text-sm font-medium py-3 px-6 tracking-wide">
-      ✦ Government data, engineered for commerce ✦
+      ✦ Your shop's digital infrastructure ✦
     </div>
 
     <!-- Navigation -->
@@ -51,43 +53,44 @@ const pageTitle = title ? `Thalux AI — ${title}` : 'Thalux AI';
         <a href="/" class="font-['Manrope'] text-lg font-bold text-[#2D2D2D] tracking-tight">
           Thalux<span class="text-[#E5B73C]"> AI</span>
         </a>
-        <a href="/" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Home</a>
-                  <a href="/data/govcon-intel" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Data</a>
-                  <a href="/services" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Services</a>
-                  <a href="/blog" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Blog</a>
-                  <a href="/about" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">About</a>
-                  <a href="/portal" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Client Portal</a>
-                  <a href="/contact" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Contact</a>
-                </div>
-                <a class="bg-[#E5B73C] text-white px-5 py-2 rounded-md font-['Manrope'] font-bold text-sm hover:bg-[#CDA333] transition-colors">mb-3">
+        <div class="flex items-center gap-6 text-sm font-medium">
+          <a href="/" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Home</a>
+          <a href="/services" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Services</a>
+          <a href="/about" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">About</a>
+          <a href="/portal" class="text-[#2D2D2D] hover:text-[#E5B73C] transition-colors">Client Portal</a>
+          <a href="/contact" class="bg-[#E5B73C] text-white px-5 py-2 rounded-md font-['Manrope'] font-bold text-sm hover:bg-[#CDA333] transition-colors">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+
+    <!-- Footer -->
+    <footer class="bg-[#2D2D2D] text-white py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-10">
+          <div>
+            <div class="font-['Manrope'] text-lg font-bold mb-3">
               Thalux<span class="text-[#E5B73C]"> AI</span>
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
-              Government data, engineered for commerce. Clean datasets delivered weekly.
+              Digital infrastructure for trade shops. Month-to-month, no contracts.
             </p>
           </div>
           <div>
-            <h4 class="font-['Manrope'] font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Data Products</h4>
+            <h4 class="font-['Manrope'] font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Services</h4>
             <ul class="space-y-2 text-sm text-gray-300">
-              <li><a href="/data/fdic-bankintel" class="hover:text-[#E5B73C] transition-colors">BankIntel</a></li>
-              <li><a href="/data/foreclosure-intel" class="hover:text-[#E5B73C] transition-colors">Foreclosure Intel</a></li>
-              <li><a href="/data/osha-compliance" class="hover:text-[#E5B73C] transition-colors">OSHA Compliance</a></li>
-              <li><a href="/data/commercial-permits" class="hover:text-[#E5B73C] transition-colors">Commercial Permits</a></li>
-              <li><a href="/data/govcon-intel" class="hover:text-[#E5B73C] transition-colors">GovCon Velocity</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-['Manrope'] font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Clients</h4>
-            <ul class="space-y-2 text-sm text-gray-300">
-              <li><a href="/portal" class="hover:text-[#E5B73C] transition-colors">Client Portal</a></li>
-              <li><a href="/privacy" class="hover:text-[#E5B73C] transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" class="hover:text-[#E5B73C] transition-colors">Terms of Service</a></li>
+              <li><a href="/services" class="hover:text-[#E5B73C] transition-colors">Website Management</a></li>
+              <li><a href="/services" class="hover:text-[#E5B73C] transition-colors">GBP Optimization</a></li>
+              <li><a href="/services" class="hover:text-[#E5B73C] transition-colors">Facebook Marketing</a></li>
+              <li><a href="/services" class="hover:text-[#E5B73C] transition-colors">Voice Receptionist</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-['Manrope'] font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Contact</h4>
             <ul class="space-y-2 text-sm text-gray-300">
-              <li><a href="tel:+171****0566" class="hover:text-[#E5B73C] transition-colors">(717) 537-0566</a></li>
+              <li><a href="tel:+17175370566" class="hover:text-[#E5B73C] transition-colors">(717) 537-0566</a></li>
+              <li><a href="mailto:admin@thalux.ai" class="hover:text-[#E5B73C] transition-colors">admin@thalux.ai</a></li>
             </ul>
           </div>
         </div>
