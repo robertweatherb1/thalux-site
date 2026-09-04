@@ -1,0 +1,46 @@
+# Thalux AI — Digital Infrastructure for Trade Shops
+
+> Thalux AI builds, manages, and maintains the digital infrastructure for trade shops (auto repair, HVAC, plumbing, electrical, contracting). Month-to-month, no contracts.
+
+## Services
+
+- **Website Management** — Custom multi-page websites with AI voice receptionist integration, mobile responsive, SEO-optimized. From $299/mo.
+- **Google Business Profile Optimization** — Claim, optimize, and manage GBP. Photos, posts, review management, Q&A. Included in all plans.
+- **Facebook Marketing** — Page setup, content calendar, local ad management. Included in all plans.
+- **AI Voice Receptionist** — 24/7 AI-powered phone answering. Captures every lead via SMS. Custom greeting and routing. $195/mo per line.
+
+## Pricing
+
+| Plan | Price | Includes |
+|------|-------|----------|
+| Bronze | $299/mo | Website + GBP + Facebook |
+| Silver | $399/mo | 3-page website + GBP + Facebook (most popular) |
+| Gold | $499/mo | 5-page website + GBP + Facebook (full package) |
+| AI Receptionist | $195/mo | Add-on per line |
+
+Free setup on all plans. Month-to-month, no long-term contracts.
+
+## Contact
+
+- Phone: (717) 537-0566
+- Email: admin@thalux.ai
+- Contact form: https://thalux.ai/contact
+- 15-minute call (no pitch): https://thalux.ai/contact
+
+## Location
+
+Serving Lancaster County, Pennsylvania, USA.
+
+## People
+
+- **Robert Weatherbie** — Founder. 41 years in the automotive trade (diagnostic technician, shop foreman, mobile repair, Tesla). Built the first Thalux system for himself.
+
+## Core Pages
+
+- Home: https://thalux.ai/
+- Services & Pricing: https://thalux.ai/services
+- About: https://thalux.ai/about
+- Contact: https://thalux.ai/contact
+- Client Portal: https://thalux.ai/portal
+- Privacy Policy: https://thalux.ai/privacy
+- Terms of Service: https://thalux.ai/terms
