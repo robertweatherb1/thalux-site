@@ -44,3 +44,13 @@ Serving Lancaster County, Pennsylvania, USA.
 - Client Portal: https://thalux.ai/portal
 - Privacy Policy: https://thalux.ai/privacy
 - Terms of Service: https://thalux.ai/terms
+
+## AI Capabilities
+
+Thalux operates an AI-driven automation system that manages the full digital presence for trade shops:
+
+- **AI Voice Receptionist** — 24/7 answering service powered by natural language AI. Captures leads, takes messages, and routes calls. Custom-trained for each business.
+- **Content Generation** — Automated website content, GBP posts, and social media updates generated and scheduled by AI.
+- **Analytics & Reporting** — Automated monthly reporting on website traffic, call logs, GBP insights, and ad performance.
+- **Lead Capture Pipeline** — AI-powered contact forms, call tracking, and SMS follow-up that never drops a lead.
+- **Multi-Platform Sync** — Coordinated presence across website, Google, Facebook, and phone — managed from one system.
